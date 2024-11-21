@@ -17,7 +17,6 @@ class Config(object):
     )
     GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configuration"
     GOOGLE_REDIRECT_URI = "http://127.0.0.1:5000/login"
-    MONGO_URI = "mongodb+srv://devangsaraogi:0TiCCbFRYLXVg2GU@cluster-1.enu2q.mongodb.net/slashdb"
 
 class ProductionConfig(Config):
     pass
