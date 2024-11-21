@@ -23,7 +23,7 @@ app.secret_key = Config.SECRET_KEY
 
 # Google OAuth2 setup (Use secure transport in production)
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
-CLIENT_SECRETS_FILE = r"C:\Users\Desmond\Desktop\slash\src\client_secret_92320207172-8cnk4c9unfaa7llua906p6kjvhnvkbqd.apps.googleusercontent.com.json"
+CLIENT_SECRETS_FILE = os.path.join(os.path.dirname(__file__).removesuffix('modules'), "client_secret_92320207172-8cnk4c9unfaa7llua906p6kjvhnvkbqd.apps.googleusercontent.com.json")
 flow = Flow.from_client_secrets_file(
     CLIENT_SECRETS_FILE,
     scopes=[
@@ -61,8 +61,12 @@ def load_comments():
 def landingpage():
     return render_template("./static/landing.html", login='username' in session)
 
+@app.route('/homepage')
+def homepage():
+    return render_template('./static/login.html')
 
-@app.route('/login', methods=['GET', 'POST'])
+
+@app.route('/callback', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form['username']
@@ -80,8 +84,9 @@ def login_google():
     return redirect(authorization_url)
 
 
-@app.route('/callback')
+@app.route('/login')
 def callback():
+    print("Callback URL:", request.url)
     flow.fetch_token(authorization_response=request.url)
     credentials = flow.credentials
     request_session = requests.Request()
@@ -112,7 +117,7 @@ def wishlist():
     wishlist_name = session.get('wishlist_name', 'default')
     items = read_wishlist(username, wishlist_name)
     items = items.to_dict('records') if not items.empty else []
-    return render_template('wishlist.html', items=items)
+    return render_template('./static/wishlist.html', items=items)
 
 
 @app.route('/share', methods=['POST'])
