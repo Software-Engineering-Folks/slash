@@ -112,7 +112,7 @@ def wishlist():
     wishlist_name = session.get('wishlist_name', 'default')
     items = read_wishlist(username, wishlist_name)
     items = items.to_dict('records') if not items.empty else []
-    return render_template('wishlist.html', items=items)
+    return render_template('./static/wishlist.html', items=items)
 
 
 @app.route('/share', methods=['POST'])
