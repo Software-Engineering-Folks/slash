@@ -1,29 +1,12 @@
 # Copyright (C) 2023 SE23-Team44
+
 # Licensed under the MIT License.
 # See the LICENSE file in the project root for the full license information.
 
+on: push
 name: Python Style Checker
-
-on:
-  push:
-    branches:
-      - main
-      - "**" # Trigger on all branches
-
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x' # Use Python 3.x (specify version as needed)
-
-      - name: Install pycodestyle
-        run: pip install pycodestyle
-
-      - name: Run pycodestyle
-        run: pycodestyle . --max-line-length=120
+      - uses: andymckay/pycodestyle-action@0.1.3
