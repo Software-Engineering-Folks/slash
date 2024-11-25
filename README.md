@@ -72,15 +72,15 @@ flask run
 # :dizzy: What's New? (Project 3 Updates)
 
 ### Coupon Scrapping
-
 Now we have implemented coupon scraping to automatically detect and apply the best available discounts from supported platforms, enhancing cost savings for users
 
 ### More Websites
-
 We have expanded support by adding more e-commerce websites, increasing the range of platforms where users can find the best deals 
 
-### Improved UI
+### MongoDB
+Our most significant feature upgrade was transitioning from storing data in a CSV file to using MongoDB. This change greatly improved the project's functionality and performance.
 
+### Improved UI
 We have improved the user interface by fixing minor errors in filtering and sorting functionalities, ensuring a smoother and more intuitive user experience.  
 
 <p align="center"><img width="700" src="./assets/Resultfinal.png"></p>  
