@@ -71,9 +71,17 @@ flask run
  
 # :dizzy: What's New? (Project 3 Updates)
 
-### Enhanced UI
+### Coupon Scrapping
 
-New grid UI with product images for a smoother shopping experience.  
+Now we have implemented coupon scraping to automatically detect and apply the best available discounts from supported platforms, enhancing cost savings for users
+
+### More Websites
+
+We have expanded support by adding more e-commerce websites, increasing the range of platforms where users can find the best deals 
+
+### Improved UI
+
+We have improved the user interface by fixing minor errors in filtering and sorting functionalities, ensuring a smoother and more intuitive user experience.  
 
 <p align="center"><img width="700" src="./assets/Resultfinal.png"></p>  
 
