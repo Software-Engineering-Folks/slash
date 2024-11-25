@@ -36,9 +36,6 @@ def httpsGet(URL):
     soup = BeautifulSoup(page.content, "html.parser")
     return BeautifulSoup(soup.prettify(), "html.parser")
 
-
-
-
 def searchAmazon(query, df_flag, currency):
     """
     Scrapes amazon.com for products matching the search query.
@@ -125,6 +122,7 @@ def google_scraper(link):
     except Exception as e:
         print(f'There was an error in scraping {link}, Error is {e}')
         return None
+    
     
 def walmart_scraper(link):
     try:
@@ -510,9 +508,7 @@ def filter(data, price_min = None, price_max = None, rating_min = None):
     return filtered_result
 
 
-def driver(
-    product, currency, num=None, df_flag=0, csv=False, cd=None, ui=False, sort=None
-):
+def driver(product, currency, num=None, df_flag=0, csv=False, cd=None, ui=False, sort=None):
     """Returns csv is the user enters the --csv arg,
     else will display the result table in the terminal based on the args entered by the user"""
 
