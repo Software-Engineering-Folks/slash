@@ -18,12 +18,19 @@ class TestApplicationFunctionality(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b"Slash", response.data)
 
+    def test_landing_page(self):
+        """Test that the landing page loads successfully."""
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b"Slash", response.data)
+
     def test_login_page_loads(self):
         """Test that the login page loads successfully and contains the expected content."""
         response = self.client.get('/login')  # Adjust this route if necessary
         self.assertEqual(response.status_code, 200)
         # Checking for an identifiable element from the HTML response
         self.assertIn(b"navbar", response.data)  # Check for navbar class to confirm the page loaded
+
 
     def test_google_login_redirect(self):
         """Test that the Google login route redirects as expected."""
@@ -150,6 +157,10 @@ class TestApplicationFunctionality(unittest.TestCase):
         """Test that a non-existent page returns a 404 status code."""
         response = self.client.get('/nonexistent')
         self.assertEqual(response.status_code, 404, "Non-existent page did not return a 404 status code.")
+
+    # #trial
+
+
 
 from slash.src.modules.scraper import searchAmazon
 class TestAmazonScraper(unittest.TestCase):
