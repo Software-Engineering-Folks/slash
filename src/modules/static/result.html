@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
-  <title>Searching</title>
+  <title>Search Results</title>
 </head>
 
 <body data-spy="scroll" data-target="#efec-scroll" data-offset="10">
@@ -26,9 +26,7 @@
         </li>
       </ul>
 
-      <img
-        src="../static/images/logo.png"
-        alt="" id="logo" class="" width="5%">
+      <img src="../static/images/logo.png" alt="" id="logo" class="" width="5%">
 
       <ul id="ultwu" class="navbar-nav">
         <li class="nav-item">
@@ -54,9 +52,7 @@
 
   <div class="container">
     <div class="conten-title">
-      <h2><img
-          src="../static/images/logo.png"
-          alt="logo" width="3%">
+      <h2><img src="../static/images/logo.png" alt="logo" width="3%">
       </h2>
       <section class="webdesigntuts-workshop">
         <form action="/search" method="GET">
@@ -69,63 +65,11 @@
     <br><br><br><br> <br><br><br><br>
   </div>
 
-
-  <!-- <div class="container" id="abc">
-
-  <div class="container" id="abc">
-    <div class="row gx-3 align-items-end">
-      <div class="col-sm">
-        <form action="/filter?product_name={{prod}}" method="post" id="filter1" class="d-flex justify-content-between">
-          <div class="form-group" >
-            <label class="control-label" for="company" ></label>
-            <select id="choice1" name="sort" class="form-control" style="color: rgb(0, 0, 0);">
-              <option value="default">Sort By</option>
-              <option value="rades">Rating High to Low</option>
-              <option value="raasc">Rating Low to High</option>
-              <option value="pasc">Price Low to High</option>
-              <option value="pdes">Price High to Low</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="control-label" for="company"></label>
-            <select id="choice1" name="currency" class="form-control"style="color: rgb(0, 0, 0);">
-              <option value="usd">USD</option>
-              <option value="inr">INR</option>
-              <option value="euro">EURO</option>
-              <option value="yuan">YUAN</option>
-              <option value="aud">AUD</option>
-              <option value="pound">POUND</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="control-label" for="company"></label>
-            <input type="number" step="0.1" min="0" id="amount_min" name="min_rating" placeholder="Min Rating"
-              class="form-control" style="border-radius: 7px; height: 44px;"style="color: rgb(0, 0, 0);">
-          </div>
-          <div class="form-group">
-            <label class="control-label" for="company"></label>
-            <input type="number" step="0.01" min="0" id="amount_min" name="min_price" placeholder="Min Price"
-              class="form-control" style="border-radius: 7px; height: 44px;"style="color: rgb(0, 0, 0);">
-          </div>
-          <div class="form-group">
-            <label class="control-label" for="company"></label>
-            <input type="number" step="0.01" min="0" id="amount_max" name="max_price" placeholder="Max Price"
-              class="form-control" style="border-radius: 7px; height: 44px;"style="color: rgb(0, 0, 0);">
-          </div>
-          <div class="form-group">
-            <label class="control-label" for="company"></label>
-            <input type="submit" style="border-radius: 7px; height: 34px;" class="searchbutton" value="Search" />
-          </div>
-        </form>
-      </div>
-    </div>
-    <hr>
-  </div> -->
-
   <div class="container fixed-form" id="abc">
     <div class="row gx-3">
       <div class="col-sm">
-        <form action="/filter?product_name={{prod}}" method="post" id="filter1" class="d-flex flex-column align-items-start">
+        <form action="/filter?product_name={{prod}}" method="post" id="filter1"
+          class="d-flex flex-column align-items-start">
           <div class="form-group mb-3">
             <label class="control-label" for="company"></label>
             <select id="choice1" name="sort" class="form-control" style="color: rgb(0, 0, 0); width: 135px;">
@@ -136,7 +80,7 @@
               <option value="pdes">Price High to Low</option>
             </select>
           </div>
-          
+
           <div class="form-group mb-3">
             <label class="control-label" for="company"></label>
             <select id="choice1" name="currency" class="form-control" style="color: rgb(0, 0, 0); width: 135px;">
@@ -148,25 +92,25 @@
               <option value="pound">POUND</option>
             </select>
           </div>
-          
+
           <div class="form-group mb-3">
             <label class="control-label" for="company"></label>
             <input type="number" step="0.1" min="0" id="amount_min" name="min_rating" placeholder="Min Rating"
               class="form-control" style="border-radius: 7px; color: rgb(0, 0, 0); width: 135px;">
           </div>
-          
+
           <div class="form-group mb-3">
             <label class="control-label" for="company"></label>
             <input type="number" step="0.01" min="0" id="amount_min" name="min_price" placeholder="Min Price"
               class="form-control" style="border-radius: 7px; color: rgb(0, 0, 0); width: 135px;">
           </div>
-          
+
           <div class="form-group mb-3">
             <label class="control-label" for="company"></label>
             <input type="number" step="0.01" min="0" id="amount_max" name="max_price" placeholder="Max Price"
               class="form-control" style="border-radius: 7px; color: rgb(0, 0, 0); width: 135px;">
           </div>
-          
+
           <div class="form-group">
             <label class="control-label" for="company"></label>
             <input type="submit" style="border-radius: 7px; height: 34px;" class="searchbutton" value="Search" />
@@ -191,19 +135,28 @@
           <div class="card-bottom">
             <div class="card-rating">Rating: {{ product.rating }}</div>
             <div class="card-buttons">
-              <a href="{{ product.link }}" target="_blank"><i class="fa fa-link"></i></a>
-              <a href="#/" id="heart-link"><i class="fa fa-heart"></i></a>
-              <!-- Button to open the comment popup -->
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#commentModal{{ loop.index }}">
-                Comment
-              </button>
+              <a href="{{ product.link }}" target="_blank" class="btn btn-primary">Visit Site</a>
+                <button class="btn btn-outline-primary add-to-wishlist" 
+                        data-title="{{ product.title }}"
+                        data-price="{{ product.price }}"
+                        data-website="{{ product.website }}"
+                        data-link="{{ product.link }}"
+                        data-img-link="{{ product.img_link }}"
+                        data-rating="{{ product.rating }}">
+                    Add to Wishlist
+                </button>
+                <button class="btn btn-outline-secondary comment-btn" data-toggle="modal" 
+                        data-target="#commentModal{{ loop.index }}">
+                    Comment
+                </button>
             </div>
           </div>
         </div>
       </div>
-  
+
       <!-- Comment Modal for each product -->
-      <div class="modal fade" id="commentModal{{ loop.index }}" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel{{ loop.index }}" aria-hidden="true">
+      <div class="modal fade" id="commentModal{{ loop.index }}" tabindex="-1" role="dialog"
+        aria-labelledby="commentModalLabel{{ loop.index }}" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -213,18 +166,17 @@
               </button>
             </div>
             <div class="modal-body">
-              <!-- Display Existing Comments -->
               {% if comments[product.title] %}
-                <h6>Previous Comments:</h6>
-                <ul>
-                  {% for comment in comments[product.title] %}
-                  <li><strong>{{ comment.username }}:</strong> {{ comment.comment }}</li>
-                  {% endfor %}
-                </ul>
+              <h6>Previous Comments:</h6>
+              <ul>
+                {% for comment in comments[product.title] %}
+                <li><strong>{{ comment.username }}:</strong> {{ comment.comment }}</li>
+                {% endfor %}
+              </ul>
               {% else %}
-                <p>No comments yet.</p>
+              <p>No comments yet.</p>
               {% endif %}
-  
+
               <!-- Add New Comment Form -->
               <form action="/add_comment" method="POST">
                 <input type="hidden" name="product_name" value="{{ product.title }}">
@@ -241,42 +193,37 @@
       {% endfor %}
     </div>
   </div>
-  
-
-  
-  
-  
 
   <script>
-   async function sendMessage() {
-    const userInput = document.getElementById("user-input").value;
-    const response = await fetch("/chat", {
+    async function sendMessage() {
+      const userInput = document.getElementById("user-input").value;
+      const response = await fetch("/chat", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({ message: userInput })
-    });
+      });
 
-    const result = await response.json();
-    console.log("Server response:", result);  // Debugging print
-    
-    if (result.error) {
+      const result = await response.json();
+      console.log("Server response:", result);  
+
+      if (result.error) {
         document.getElementById("chat-box").innerText = result.error;
-    } else {
+      } else {
         const assistantMessage = document.createElement("div");
         assistantMessage.textContent = "Assistant: " + result.response;
         document.getElementById("chat-box").appendChild(assistantMessage);
+      }
     }
-}
+  </script>
 
-    </script>
-    
-    
-  <!-- Pagination Links Section -->
   <div class="pagination-container">
     {% for page_num in range(1, total_pages + 1) %}
-    <a href="#" class="pagination-link" data-page="{{ page_num }}">{{ page_num }}</a>
+    <a href="/search?page={{ page_num }}&product_name={{ prod }}"
+      class="pagination-link {% if page_num == current_page %}active{% endif %}">
+      {{ page_num }}
+    </a>
     {% endfor %}
   </div>
 
@@ -299,8 +246,6 @@
          </div>
      </div>`;
     }
-
-    
 
     // Pagination logic
     var itemsPerPage = 20;
@@ -344,7 +289,6 @@
         template = template.replace('<a href="" target="_blank"><i class="fa fa-link"></i></a>', `<a href="${cheapestProduct.link}" target="_blank"><i class="fa fa-link"></i></a>`);
         // template = template.replace('<a href="#/" id="heart-link"><i class="fa fa-heart"></i></a>', '');
 
-
         wrapper.innerHTML = template;
 
         wrapper.querySelector("#heart-link").addEventListener("click", function (e) {
@@ -356,7 +300,7 @@
         let cheapestProductDiv = document.createElement("div");
         cheapestProductDiv.setAttribute("class", "cheapest-product-container");
         cheapestProductDiv.style.backgroundColor = "#90EE90"; // Light green
-cheapestProductDiv.style.boxShadow = "1 0 10px rgba(144, 238, 144, 0.6)"; // Light green glow
+        cheapestProductDiv.style.boxShadow = "1 0 10px rgba(144, 238, 144, 0.6)"; // Light green glow
 
         cheapestProductDiv.appendChild(wrapper);
 
@@ -364,9 +308,6 @@ cheapestProductDiv.style.boxShadow = "1 0 10px rgba(144, 238, 144, 0.6)"; // Lig
         grid.insertBefore(cheapestProductDiv, grid.firstChild);
       }
     }
-
-
- 
 
     function showPage(page) {
       var startIndex = (page - 1) * itemsPerPage;
@@ -420,16 +361,7 @@ cheapestProductDiv.style.boxShadow = "1 0 10px rgba(144, 238, 144, 0.6)"; // Lig
   </script>
   <div class="col-md-4"></div>
   </div>
-
-
-
-  
-
-
   </header>
-
-
-
   <script type="text/javascript" src="{{ url_for('static', filename='grid.js') }}"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -440,7 +372,6 @@ cheapestProductDiv.style.boxShadow = "1 0 10px rgba(144, 238, 144, 0.6)"; // Lig
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-
   <script>
     !function (a) { "use strict"; "function" == typeof define && define.amd ? define(["jquery"], a) : a(jQuery) }(function (a) { "use strict"; function b(a) { if (a instanceof Date) return a; if (String(a).match(g)) return String(a).match(/^[0-9]*$/) && (a = Number(a)), String(a).match(/\-/) && (a = String(a).replace(/\-/g, "/")), new Date(a); throw new Error("Couldn't cast `" + a + "` to a date object.") } function c(a) { var b = a.toString().replace(/([.?*+^$[\]\\(){}|-])/g, "\\$1"); return new RegExp(b) } function d(a) { return function (b) { var d = b.match(/%(-|!)?[A-Z]{1}(:[^;]+;)?/gi); if (d) for (var f = 0, g = d.length; f < g; ++f) { var h = d[f].match(/%(-|!)?([a-zA-Z]{1})(:[^;]+;)?/), j = c(h[0]), k = h[1] || "", l = h[3] || "", m = null; h = h[2], i.hasOwnProperty(h) && (m = i[h], m = Number(a[m])), null !== m && ("!" === k && (m = e(l, m)), "" === k && m < 10 && (m = "0" + m.toString()), b = b.replace(j, m.toString())) } return b = b.replace(/%%/, "%") } } function e(a, b) { var c = "s", d = ""; return a && (a = a.replace(/(:|;|\s)/gi, "").split(/\,/), 1 === a.length ? c = a[0] : (d = a[0], c = a[1])), Math.abs(b) > 1 ? c : d } var f = [], g = [], h = { precision: 100, elapse: !1, defer: !1 }; g.push(/^[0-9]*$/.source), g.push(/([0-9]{1,2}\/){2}[0-9]{4}( [0-9]{1,2}(:[0-9]{2}){2})?/.source), g.push(/[0-9]{4}([\/\-][0-9]{1,2}){2}( [0-9]{1,2}(:[0-9]{2}){2})?/.source), g = new RegExp(g.join("|")); var i = { Y: "years", m: "months", n: "daysToMonth", d: "daysToWeek", w: "weeks", W: "weeksToMonth", H: "hours", M: "minutes", S: "seconds", D: "totalDays", I: "totalHours", N: "totalMinutes", T: "totalSeconds" }, j = function (b, c, d) { this.el = b, this.$el = a(b), this.interval = null, this.offset = {}, this.options = a.extend({}, h), this.instanceNumber = f.length, f.push(this), this.$el.data("countdown-instance", this.instanceNumber), d && ("function" == typeof d ? (this.$el.on("update.countdown", d), this.$el.on("stoped.countdown", d), this.$el.on("finish.countdown", d)) : this.options = a.extend({}, h, d)), this.setFinalDate(c), this.options.defer === !1 && this.start() }; a.extend(j.prototype, { start: function () { null !== this.interval && clearInterval(this.interval); var a = this; this.update(), this.interval = setInterval(function () { a.update.call(a) }, this.options.precision) }, stop: function () { clearInterval(this.interval), this.interval = null, this.dispatchEvent("stoped") }, toggle: function () { this.interval ? this.stop() : this.start() }, pause: function () { this.stop() }, resume: function () { this.start() }, remove: function () { this.stop.call(this), f[this.instanceNumber] = null, delete this.$el.data().countdownInstance }, setFinalDate: function (a) { this.finalDate = b(a) }, update: function () { if (0 === this.$el.closest("html").length) return void this.remove(); var b, c = void 0 !== a._data(this.el, "events"), d = new Date; b = this.finalDate.getTime() - d.getTime(), b = Math.ceil(b / 1e3), b = !this.options.elapse && b < 0 ? 0 : Math.abs(b), this.totalSecsLeft !== b && c && (this.totalSecsLeft = b, this.elapsed = d >= this.finalDate, this.offset = { seconds: this.totalSecsLeft % 60, minutes: Math.floor(this.totalSecsLeft / 60) % 60, hours: Math.floor(this.totalSecsLeft / 60 / 60) % 24, days: Math.floor(this.totalSecsLeft / 60 / 60 / 24) % 7, daysToWeek: Math.floor(this.totalSecsLeft / 60 / 60 / 24) % 7, daysToMonth: Math.floor(this.totalSecsLeft / 60 / 60 / 24 % 30.4368), weeks: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 7), weeksToMonth: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 7) % 4, months: Math.floor(this.totalSecsLeft / 60 / 60 / 24 / 30.4368), years: Math.abs(this.finalDate.getFullYear() - d.getFullYear()), totalDays: Math.floor(this.totalSecsLeft / 60 / 60 / 24), totalHours: Math.floor(this.totalSecsLeft / 60 / 60), totalMinutes: Math.floor(this.totalSecsLeft / 60), totalSeconds: this.totalSecsLeft }, this.options.elapse || 0 !== this.totalSecsLeft ? this.dispatchEvent("update") : (this.stop(), this.dispatchEvent("finish"))) }, dispatchEvent: function (b) { var c = a.Event(b + ".countdown"); c.finalDate = this.finalDate, c.elapsed = this.elapsed, c.offset = a.extend({}, this.offset), c.strftime = d(this.offset), this.$el.trigger(c) } }), a.fn.countdown = function () { var b = Array.prototype.slice.call(arguments, 0); return this.each(function () { var c = a(this).data("countdown-instance"); if (void 0 !== c) { var d = f[c], e = b[0]; j.prototype.hasOwnProperty(e) ? d[e].apply(d, b.slice(1)) : null === String(e).match(/^[$A-Z_][0-9A-Z_$]*$/i) ? (d.setFinalDate.call(d, e), d.start()) : a.error("Method %s does not exist on jQuery.countdown".replace(/\%s/gi, e)) } else new j(this, b[0], b[1]) }) } });</script>
   <script>
@@ -472,37 +403,37 @@ cheapestProductDiv.style.boxShadow = "1 0 10px rgba(144, 238, 144, 0.6)"; // Lig
         } else {
           Scroll.classList.add("bg-menu");
         }
-        // ulone.classList.add("nav-scroll");
-        // ultwu.classList.add("nav-scroll");
-        // logo.classList.add("logo");
       } else {
         Scroll.classList.remove("bg-menu");
         Scroll.classList.remove("bg-menu-light");
-        // ulone.classList.remove("nav-scroll");
-        // ultwu.classList.remove("nav-scroll");
-        // logo.classList.remove("logo");
       }
     };
   </script>
-
-
   <script>
+    function addToCart(heartLink, productData, e) {
+      console.log("Add to Cart has been entered")
+      e.preventDefault()
+      if (e.target.classList.contains("clicked-heart")) return
 
+      e.target.classList.add("clicked-heart")
 
+      const postData = new URLSearchParams()
+      Object.keys(productData).forEach(key => postData.append(key, productData[key]))
 
-    function addToCart(heartLink, product_data, e) {
-      if (e.target && e.target.classList && !e.target.classList.contains("clicked-heart")) {
-        e.target.classList.add("clicked-heart");
-      }
-      let post_data = new URLSearchParams();
-      // product_data = JSON.parse(product_data)
-      for (k in product_data)
-        post_data.append(k, product_data[k])
       fetch("/add-wishlist-item", {
-        method: 'post',
-        body: post_data,
-      }).then(result => console.log(result)).catch(error => console.error(error))
+        method: "POST",
+        body: postData,
+      })
+        .then(response => {
+          if (response.ok) {
+            alert("Product added to Wishlist!")
+          } else {
+            alert("Failed to add product to Wishlist.")
+          }
+        })
+        .catch(error => console.error("Error: ", error))
     }
+
     var darkModeButton = document.getElementById("toggle-button");
     darkModeButton.addEventListener("click", function () {
       let scroll = window.scrollY;
@@ -524,6 +455,39 @@ cheapestProductDiv.style.boxShadow = "1 0 10px rgba(144, 238, 144, 0.6)"; // Lig
       }
     })
   </script>
+
+  <script>
+    document.querySelectorAll('.add-to-wishlist').forEach(button => {
+        button.addEventListener('click', function() {
+            const data = {
+                title: this.dataset.title,
+                price: this.dataset.price,
+                website: this.dataset.website,
+                link: this.dataset.link,
+                img_link: this.dataset.imgLink,
+                rating: this.dataset.rating
+            };
+
+            fetch('/add-wishlist-item', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    alert('Item added to wishlist!');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to add item to wishlist');
+            });
+        });
+    });
+</script>
 </body>
 
 </html>
