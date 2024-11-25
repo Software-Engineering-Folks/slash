@@ -128,6 +128,29 @@ class TestApplicationFunctionality(unittest.TestCase):
         response = self.client.get('/register')
         self.assertIn(b'type="submit"', response.data.lower(), "Submit button not found on the registration page.")
 
+    # More Test Cases
+
+    def test_login_page_contains_login_form(self):
+        """Test that the login page contains a login form."""
+        response = self.client.get('/login')
+        self.assertIn(b'<form', response.data, "Login page does not contain a login form.")
+
+    def test_login_page_has_submit_button(self):
+        """Test that the login page contains a submit button."""
+        response = self.client.get('/login')
+        self.assertIn(b'type="submit"', response.data, "Login page does not contain a submit button.")
+
+    def test_logout_redirect(self):
+        """Test that the logout route redirects to the home page."""
+        response = self.client.get('/logout', follow_redirects=False)
+        self.assertEqual(response.status_code, 302, "Logout did not redirect.")
+        self.assertIn(b'/', response.headers['Location'].encode(), "Logout did not redirect to the home page.")
+
+    def test_404_page(self):
+        """Test that a non-existent page returns a 404 status code."""
+        response = self.client.get('/nonexistent')
+        self.assertEqual(response.status_code, 404, "Non-existent page did not return a 404 status code.")
+
 from slash.src.modules.scraper import searchAmazon
 class TestAmazonScraper(unittest.TestCase):
     @classmethod
