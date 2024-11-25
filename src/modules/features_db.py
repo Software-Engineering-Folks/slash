@@ -1,5 +1,9 @@
 import re
 from datetime import datetime
+import ssl
+import smtplib
+from email.message import EmailMessage
+from .config import Config
 from . import scraper
 
 # User Management Functions
@@ -70,7 +74,6 @@ def read_wishlist(email, wishlist_name, mongo=None):
         print(f"Error reading wishlist: {e}")
     return []
 
-# to be worked on
 def wishlist_remove_list(email, wishlist_name, index, mongo=None):
     """
     Removes an item from a user's wishlist in MongoDB by index.
@@ -94,7 +97,6 @@ def wishlist_remove_list(email, wishlist_name, index, mongo=None):
         print(f"Error removing item from wishlist: {e}")
         return False
 
-# to be worked on
 def share_wishlist(email_sender, wishlist_name, email_receiver, mongo=None):
     """
     Sends a user's wishlist via email after fetching from database.
@@ -104,7 +106,27 @@ def share_wishlist(email_sender, wishlist_name, email_receiver, mongo=None):
         wishlist = user["wishlists"][wishlist_name]
         links_list = "\n".join([item.get("link", "N/A") for item in wishlist])
         
-        # Email sending logic (unchanged)
+        try:
+            email_password = Config.EMAIL_PASS
+            subject = f'Slash wishlist of {email_sender}'
+            body = "\n".join([
+                f"{i}. {link}" for i, link in enumerate(links_list.split(), start=1)
+            ])
+
+            em = EmailMessage()
+            em['From'] = email_sender
+            em['To'] = email_receiver
+            em['Subject'] = subject
+            em.set_content(body)
+
+            context = ssl.create_default_context()
+            with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
+                smtp.login(email_sender, email_password)
+                smtp.sendmail(email_sender, email_receiver, em.as_string())
+
+        except Exception as e:
+            print("Error occured while sending mail, ", e)
+            return 'Failed to send email'
 
 # Comment Functions
 def load_comments(product_name=None, mongo=None):
