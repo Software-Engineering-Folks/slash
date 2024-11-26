@@ -4,8 +4,6 @@
 Welcome to the installation guide for **Slash**. Follow these steps to set up the environment and run the application.
 
 ## Table of Contents
-- [Installation Guide for Slash](#installation-guide-for-slash)
-  - [Table of Contents](#table-of-contents)
   - [Prerequisites](#prerequisites)
   - [Step 1: Clone the Repository](#step-1-clone-the-repository)
   - [Step 2: Set Up a Virtual Environment (Optional)](#step-2-set-up-a-virtual-environment-optional)
