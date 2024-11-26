@@ -86,7 +86,7 @@ Now we can add and read comments for more informed decisions.
  For Additional Information direct to this [page](https://github.com/Software-Engineering-Folks/slash/tree/sfe-master/docs)  and check all the markdown files.
 
 
-:sparkles: Contributors [Edit Please]
+:sparkles: Contributors
 ---
 <table>
   <tr>
