@@ -25,6 +25,10 @@ Slash is a web-scraping tool that aggregates the best deals from leading e-comme
 - **Fast**: Save time by comparing deals across websites instantly.
 - **Easy**: Use straightforward commands to filter and sort items.
 - **Powerful**: Tailor your searches to get precise results quickly.
+
+## Flowchart of Slash
+<p align="center"><img width="1000" src="./assets/proj3.drawio.png"></p>
+
 <br><br>
 ## Watch how our application works: [Edit Please]
 ### Click here to watch - [Youtube Video](https://youtu.be/133EWUQWe5Q) <br>
