@@ -6,14 +6,15 @@ from flask_pymongo import PyMongo
 from google.oauth2 import id_token
 from google_auth_oauthlib.flow import Flow
 from google.auth.transport import requests
-
+from dotenv import load_dotenv
 from .scraper import driver
 from .features_db import ( create_user, check_user, wishlist_add_item, read_wishlist, wishlist_remove_list, share_wishlist, load_comments)
-from .config import Config
+
+load_dotenv()
 
 app = Flask(__name__, template_folder=".")
-app.secret_key = Config.SECRET_KEY
-app.config["MONGO_URI"] = Config.MONGO_URI
+app.secret_key = os.getenv("SECRET_KEY")
+app.config["MONGO_URI"] = os.getenv("MONGO_URI") + os.getenv("DB_NAME")
 
 mongo = PyMongo(app)
 
@@ -27,7 +28,7 @@ flow = Flow.from_client_secrets_file(
         "https://www.googleapis.com/auth/userinfo.email",
         "openid"
     ],
-    redirect_uri=Config.GOOGLE_REDIRECT_URI
+    redirect_uri=os.getenv("GOOGLE_REDIRECT_URI")
 )
 
 # Routes
