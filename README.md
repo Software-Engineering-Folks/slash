@@ -21,10 +21,10 @@
 
 <h2> What is Slash Exactly? </h2>
 
-Slash is a powerful tool designed to scrape leading e-commerce websites to find the best deals on products you're searching for. It currently supports popular platforms including [Walmart](https://www.walmart.com/), [Target](https://www.target.com/), [BestBuy](https://www.bestbuy.com/),  [Amazon](https://www.amazon.com/), [Google Shopping](https://shopping.google.com/),  [BJs](https://www.bjs.com/),  [Etsy](https://www.etsy.com/), and [EBay](https://www.ebay.com/).
-- **Fast**: With slash, you can save over 50% of your time by comparing deals across websites within seconds
-- **Easy**: Slash uses very easy commands to filter, sort and search your items
-- **Powerful**: Quickly alter the commands to get desired results
+Slash is a web-scraping tool that aggregates the best deals from leading e-commerce platforms like [Walmart](https://www.walmart.com/), [Target](https://www.target.com/), [BestBuy](https://www.bestbuy.com/),  [Amazon](https://www.amazon.com/), [Google Shopping](https://shopping.google.com/),  [BJs](https://www.bjs.com/),  [Etsy](https://www.etsy.com/), and [EBay](https://www.ebay.com/).
+- **Fast**: Save time by comparing deals across websites instantly.
+- **Easy**: Use straightforward commands to filter and sort items.
+- **Powerful**: Tailor your searches to get precise results quickly.
 <br><br>
 ## Watch how our application works: [Edit Please]
 ### Click here to watch - [Youtube Video](https://youtu.be/133EWUQWe5Q) <br>
@@ -33,8 +33,7 @@ Slash is a powerful tool designed to scrape leading e-commerce websites to find 
 # :rocket: Quick Guide [Edit Please]
 
 1. Access the Github repository from your computer. 
- - First, pre-install [git](https://git-scm.com/) on  your machine. 
- - Then, clone the repo using the following command:
+ - Ensure [git](https://git-scm.com/) is installed. Clone the repository:
  ```
  git clone https://github.com/Software-Engineering-Folks/slash.git
  ```
@@ -42,13 +41,13 @@ Slash is a powerful tool designed to scrape leading e-commerce websites to find 
 ```
 cd slash
 ```
-2. Install the ```requirements.txt```. 
+1. Install the ```requirements.txt```. 
 - This project uses Python 3, so make sure that [Python](https://www.python.org/downloads/) and [Pip](https://pip.pypa.io/en/stable/installation/) are preinstalled.
 - Install the ```requirements.txt``` file using pip.
 ```
 pip3 install -r requirements.txt
 ```
-3. Running the program
+1. Running the program
 
 - Set the environmental variable using either of the following commands:
  ```
@@ -72,10 +71,10 @@ flask run
 # :dizzy: What's New? (Project 3 Updates)
 
 ### MongoDB
-We've significantly enhanced our platform's speed and efficiency by migrating to MongoDB. By leveraging MongoDB, we've significantly improved performance and scalability. This powerful database solution allows us to store and manage data more efficiently, providing a smoother and faster user experience.
+Migrated to MongoDB for improved performance, scalability, and faster data handling. By leveraging MongoDB, we've significantly improved performance and scalability. This powerful database solution allows us to store and manage data more efficiently, providing a smoother and faster user experience.
 
 ### Coupon Scrapping [Edit Please]
-Now we have implemented coupon scraping to automatically detect and apply the best available discounts from supported platforms, enhancing cost savings for users.
+Integrated coupon scraping to detect and apply the best discounts automatically.
 
 ### Wishlists
 Keep track of your desired products by adding them to your wishlist and making shopping more easier.
@@ -103,7 +102,7 @@ Now we can add and read comments for more informed decisions.
 [Click for Demo Video](https://drive.google.com/file/d/1Efehn_X6z4WYxklG2uGirg7ytlanE8Hl/view)
 
 
-# :muscle: What's next for future development?
+# :muscle: What's Next for future development?
 
 - Coupon Scraping: Incorporate coupon scraping functionality to help users save even more by automatically finding and applying available discounts.
 - Expanded Scraper Coverage: Add more scrapers to cover a wider range of e-commerce websites, offering users more options and better deals across various platforms.
@@ -113,7 +112,7 @@ Now we can add and read comments for more informed decisions.
 :thought_balloon: Use Case
 ---
 * ***Students***: Students coming to university are generally on a budget and time constraint and generally spend hours wasting time to search for products on Websites. Slash is the perfect tool for these students that slashes all the unnecessary details on a website and helps them get prices for a product across multiple websites.Make the most of this tool in the upcoming Black Friday Sale.
-* ***Data Analysts***: Finding data for any project is one of the most tedious job for a data analyst, and the datasets found might not be the most recent one. Using slash, they can create their own dataset in real time and format it as per their needs so that they can focus on what is actually inportant.
+* ***Data Analysts***: Finding data for any project is one of the most tedious job for a data analyst, and the datasets found might not be the most recent one. Using slash, they can create their own dataset in real time and format it as per their needs so that they can focus on what is actually important.
   
 # Additional Information
  For Additional Information direct to this [page](https://github.com/SE-Fall-2024-Team-69/slash/tree/main/docs)  and check all the markdown files 

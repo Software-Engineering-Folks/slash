@@ -11,6 +11,7 @@ Ensure you have the following installed:
 
 1. **Python 3.8+**
 2. **Git**
+3. **MongoDB Compass** (Optional)
 
 ## Step 1: Clone the Repository
 
@@ -46,13 +47,17 @@ Install all required dependencies listed in the `requirements.txt` file:
 pip install -r requirements.txt
 ```
 
-## Step 4: Google OAuth Setup [Edit Please]
+## Step 4: Google OAuth Setup
 
-1. **Google OAuth Client Secrets**: Make sure you have a valid Google OAuth client secrets file.
-2. Place your client secrets JSON file at:
-   ```
-   C:\Users\Desmond\Desktop\slash\src\client_secret_92320207172-8cnk4c9unfaa7llua906p6kjvhnvkbqd.apps.googleusercontent.com.json
-   ```
+1. **Obtain Google OAuth Credentials**: 
+   - Go to the [Google Cloud Console](https://console.cloud.google.com/).
+   - Create a new project or use an existing one.
+   - Navigate to **APIs & Services** > **Credentials** and click **Create Credentials** > **OAuth 2.0 Client IDs**.
+   - Set the application type to **Web application**.
+   - Specify `http://127.0.0.1:5000/login` as the redirect URI.
+   - Download the JSON file containing the client secrets.
+
+2. **Client Secrets File**: Place the downloaded JSON file in ```src``` directory.
 
 ## Step 5: Configure Environment Variables
 
@@ -79,7 +84,6 @@ Run the `init_db.py` script to set up the database schema and initial data:
 ```bash
 python init_db.py
 ```
-
 Ensure that your database configuration is correctly set up in your environment variables before running this script.
 
 ## Step 7: Run the Application
@@ -91,12 +95,14 @@ flask run
 ```
 Add ```--debug``` to run in debug mode.
 
-By default, the app will run at `http://127.0.0.1:5000/`.
+By default, the app will run at `http://127.0.0.1:5000/`. Ensure Flask picks up the `.env` file configuration. If you encounter CORS issues, configure Flask to allow cross-origin requests in development mode.
+
 
 ## Troubleshooting
 
 - **Database Issues**: Run `http://127.0.0.1:5000/test` to test database connection.
 - **OAuth Errors**: Check that your OAuth credentials are valid and stored at the specified location.
+- **Environment Variable [Mac Users only]**: Run ```source .env``` after updated .env file.
 
 ---
 
