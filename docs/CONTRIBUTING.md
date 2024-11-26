@@ -21,7 +21,7 @@ This project and everyone participating in it is governed by the [Code of Conduc
 ### Reporting Bugs
 
 This section gives detailed information on how to report bugs. Reporting a bug will help the community and maintainers of the repository. <br>
-Before reporting any bug, make sure it is correct and you have all the details with you. For creating any bug report, please fill out [the required template](https://github.com/SE23-Team44/slash/blob/main/docs/bug_report.md). This template will give us necessary information to help solve a bug faster.
+Before reporting any bug, make sure it is correct and you have all the details with you. For creating any bug report, please fill out [the required template](https://github.com/Software-Engineering-Folks/slash/blob/main/docs/bug_report.md). This template will give us necessary information to help solve a bug faster.
 
 #### Before Submitting A Bug Report
 
