@@ -1,0 +1,302 @@
+/* Copyright (C) 2024 SE24-Team72
+
+Licensed under the MIT License.
+See the LICENSE file in the project root for the full license information. */
+
+@import url('https://fonts.googleapis.com/css?family=Acme|Open+Sans:400,700|Source+Sans+Pro:400,600,700');
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #101010;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav.bg-transparent {
+    background: transparent;
+    transition: all .3s ease;
+}
+
+nav ul {
+    transition: all .6s ease;
+}
+
+nav ul li.nav-item a {
+    color: #f1f1f1 !important;
+    font-family: 'Open Sans', sans-serif;
+    transition: all .3s ease;
+}
+
+nav ul li.nav-item a:hover {
+    color: #3498DB !important;
+}
+
+@media only screen and (min-width: 992px) {
+    .nav-scroll {
+        margin: 0 35px;
+        transition: all .6s ease;
+    }
+
+    .logo {
+        display: block !important;
+        transition: all .9s ease;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    img#logo {
+        display: none !important;
+    }
+}
+
+.bg-menu {
+    background: #171719a3 !important;
+}
+
+img#logo {
+    margin-top: 0;
+    padding: 0;
+    position: relative;
+    display: block;
+    transition: all .9s ease;
+}
+
+#logo {
+    margin-right: auto;
+}
+
+h1 {
+    font-family: 'Acme', sans-serif;
+    font-size: 2.4em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    margin-top: 20px;
+}
+
+.card {
+    background: #222831;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #333;
+    margin: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    color: #3ef538b2;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: #EEEEEE;
+    margin-bottom: 10px;
+}
+
+.card-text small {
+    color: #9DAAF2;
+}
+
+.btn-primary {
+    background-color: #3498DB;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2980B9;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.slider .icon {
+    font-size: 20px;
+    color: #fff;
+    padding: 4px;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.dark-mode {
+    background-color: #e4e5f1;
+}
+
+.dark-mode .card {
+    background: #d2d3db;
+}
+
+.dark-mode .card-title {
+    color: #484b6a;
+}
+
+.dark-mode .card-text {
+    color: #484b6a;
+}
+
+.dark-mode .card-text small {
+    color: #484b6a;
+}
+
+.dark-mode .btn-primary {
+    background-color: #3498DB;
+    border: none;
+}
+
+.dark-mode .btn-primary:hover {
+    background-color: #2980B9;
+}
+
+.dark-mode nav ul li.nav-item a {
+    color: black !important;
+    font-family: 'Open Sans', sans-serif;
+    transition: all .3s ease;
+}
+
+/* Center the search bar vertically */
+.nav-item-search {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item-search input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 10px;
+    width: 300px;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-top: 0px;
+}
+
+.nav-item-search button {
+    background-color: #3498DB;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    vertical-align: middle;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0px;
+}
+
+.nav-item-search button:hover {
+    background-color: #2980B9;
+}
+
+.nav-item-logo img {
+    vertical-align: middle;
+    height: 40px;
+    width: 40px;
+    padding-right: 20px;
+}
+
+.nav-link {
+    vertical-align: middle;
+}
+
+.navbar-nav {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+.fixed-top {
+    background-color: #00000088;
+    align-items: center;
+    width: 100%
+}
+
+.theme-slider {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+}
