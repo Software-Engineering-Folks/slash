@@ -2,9 +2,12 @@ import re
 from datetime import datetime
 import ssl
 import smtplib
+from dotenv import load_dotenv
 from email.message import EmailMessage
 from .config import Config
 from . import scraper
+
+load_dotenv()
 
 # User Management Functions
 def create_user(email, password=None, name=None, mongo=None):

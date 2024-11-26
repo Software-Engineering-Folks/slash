@@ -1,8 +1,12 @@
+import os
 from pymongo import MongoClient
 from datetime import datetime
+from dotenv import load_dotenv
 
-MONGO_URI = ""
-DB_NAME = "slashdb"
+load_dotenv()
+
+MONGO_URI = os.getenv("MONGO_URI")
+DB_NAME = os.getenv("DB_NAME")
 
 test_user = {
   "email": "user@test.com",
