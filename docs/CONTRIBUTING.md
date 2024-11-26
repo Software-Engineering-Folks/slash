@@ -32,7 +32,7 @@ The following is a list of items you need to check before submitting a bug repor
 
 #### To Submit A Good Bug Report
 
-[GitHub issues](https://guides.github.com/features/issues/) You can track the bugs from this. For the repository that has bug, create an issue and fill out [the template](https://github.com/SE23-Team44/slash/blob/main/docs/bug_report.md) to give details of the bug.
+[GitHub issues](https://guides.github.com/features/issues/) You can track the bugs from this. For the repository that has bug, create an issue and fill out [the template](https://github.com/Software-Engineering-Folks/slash/blob/main/docs/bug_report.md) to give details of the bug.
 
 - To identify the problem, give the issue a clear and informative term. <br>
 - Describe in as much detail as possible to duplicate the problem. Explain the problem and explain about the exact command sused in the terminal which caus ethe bug to occur.
@@ -53,7 +53,7 @@ Provide more context by answering these questions: <br>
 ## Suggesting Enhancements
 
 Any suggesting enhancements like adding new features or imporving existing functionalities, etc can done by following the below guidelines. They help maintainers understand your improvement. <br>
-[the template](https://github.com/SE23-Team44/slash/blob/main/docs/feature_report.md)- this template is to be filled to add suggestions. These can include the steps that you imagine you would take if the feature you're requesting existed.
+[the template](https://github.com/Software-Engineering-Folks/slash/blob/main/docs/feature_report.md)- this template is to be filled to add suggestions. These can include the steps that you imagine you would take if the feature you're requesting existed.
 
 ##### Before Submitting An Enhancement Suggestion
 
@@ -62,7 +62,7 @@ Any suggesting enhancements like adding new features or imporving existing funct
 
 #### To Submit A Good Enhancement Suggestion
 
-[GitHub issues](https://guides.github.com/features/issues/) You can track the bugs from this. For the repository that has bug, create an issue and fill out [the template](https://github.com/SE23-Team44/slash/blob/main/docs/bug_report.md) to give details of the bug.
+[GitHub issues](https://guides.github.com/features/issues/) You can track the bugs from this. For the repository that has bug, create an issue and fill out [the template](https://github.com/Software-Engineering-Folks/slash/blob/main/docs/bug_report.md) to give details of the bug.
 
 - To identify the problem, give the issue a clear and informative term. <br>
 - Describe in as much detail as possible to duplicate the problem. Explain the problem and explain about the exact command sused in the terminal which caus ethe bug to occur.
