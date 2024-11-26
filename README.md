@@ -30,41 +30,9 @@ Slash is a web-scraping tool that aggregates the best deals from leading e-comme
 ### Click here to watch - [Youtube Video](https://youtu.be/133EWUQWe5Q) <br>
 <br>
 
-# :rocket: Quick Guide [Edit Please]
+# :rocket: Installation
 
-1. Access the Github repository from your computer. 
- - Ensure [git](https://git-scm.com/) is installed. Clone the repository:
- ```
- git clone https://github.com/Software-Engineering-Folks/slash.git
- ```
- * Finally, ```cd``` into the local repository.
-```
-cd slash
-```
-1. Install the ```requirements.txt```. 
-- This project uses Python 3, so make sure that [Python](https://www.python.org/downloads/) and [Pip](https://pip.pypa.io/en/stable/installation/) are preinstalled.
-- Install the ```requirements.txt``` file using pip.
-```
-pip3 install -r requirements.txt
-```
-1. Running the program
-
-- Set the environmental variable using either of the following commands:
- ```
-MAC
-export FLASK_APP=./src/modules/app
-flask run
-
-Windows Command Prompt
-set FLASK_APP=.\src\modules\app 
-flask run
-
-Windows Powershell
-$Env:FLASK_APP='.\src\modules\app'
-flask run
-```
-
-4. Once flask is running, open your internet browser and type ```http://127.0.0.1:5000/``` into the search bar.
+For detailed installation and setup instructions, please refer to [INSTALL.md](https://github.com/Software-Engineering-Folks/slash/blob/sfe-master/INSTALL.md).
 
 <p>
  
