@@ -731,6 +731,7 @@ def searchEbayDeals():
             price = item.select_one('.dne-itemtile-price').text.strip()
             link = item.select_one('a')['href']
             img_link = item.select_one('.dne-itemtile-imagewrapper img')['src']
+            price = price.rstrip('See all trending deals')
             deals.append({
                 'title': title,
                 'price': price,
