@@ -8,7 +8,7 @@ from google_auth_oauthlib.flow import Flow
 from google.auth.transport import requests
 from dotenv import load_dotenv
 from .formatter import sortList, filterList
-from .scraper import driver
+from .scraper import driver, getDeals
 from .features_db import ( create_user, check_user, wishlist_add_item, read_wishlist, wishlist_remove_list, share_wishlist, load_comments)
 
 load_dotenv()
@@ -54,7 +54,7 @@ def landingpage():
 
 @app.route('/homepage')
 def homepage():
-    return render_template('./static/login.html')
+    return render_template('./static/login.html', deals=getDeals())
 
 @app.route('/callback', methods=['GET', 'POST'])
 def login():
@@ -64,7 +64,7 @@ def login():
             session['username'] = username
             return redirect(url_for('landingpage'))
         return render_template("./static/landing.html", login=False, invalid=True)
-    return render_template('./static/login.html')
+    return render_template('./static/login.html', deals=getDeals())
 
 @app.route('/login/google')
 def login_google():
