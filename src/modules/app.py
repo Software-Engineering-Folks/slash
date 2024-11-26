@@ -7,6 +7,7 @@ from google.oauth2 import id_token
 from google_auth_oauthlib.flow import Flow
 from google.auth.transport import requests
 from dotenv import load_dotenv
+from .formatter import sortList, filterList
 from .scraper import driver
 from .features_db import ( create_user, check_user, wishlist_add_item, read_wishlist, wishlist_remove_list, share_wishlist, load_comments)
 
@@ -17,6 +18,8 @@ app.secret_key = os.getenv("SECRET_KEY")
 app.config["MONGO_URI"] = os.getenv("MONGO_URI") + os.getenv("DB_NAME")
 
 mongo = PyMongo(app)
+
+fetched_data = {}
 
 # Google OAuth2 setup (Use secure transport in production)
 os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
@@ -125,6 +128,7 @@ def search():
 
     try:
         data = driver(product, currency=None)
+        fetched_data[product] = data
     except Exception as e:
         print("Exception occured in Driver: ", e)
         data = None
@@ -156,6 +160,7 @@ def add_comment():
 
 @app.route("/filter", methods=["POST", "GET"])
 def product_search_filtered():
+    print("SNEHIL ", request.form, flush=True)
     product = request.args.get("product_name")
     sort = request.form.get("sort")
     currency = request.form.get("currency")
@@ -166,10 +171,13 @@ def product_search_filtered():
             request.form.get("min_rating")
         ]
     )
-    return product_search_filtered(
-        product, sort if sort != "default" else None,
-        currency if currency != "usd" else None, None,
-        min_price, max_price, min_rating
+    data = sortList(fetched_data[product], sort[0:2], reverse=(sort[2:] == 'asc'))
+    data = filterList(data, min_price, max_price, min_rating)
+    comments = load_comments(product_name=product, mongo=mongo)
+    total_pages = (len(data) + 19) // 20
+    return render_template(
+        "./static/result.html", data=data.to_dict(orient='records'), prod=product,
+        total_pages=total_pages, comments=comments
     )
 
 @app.route("/add-wishlist-item", methods=["POST"])
