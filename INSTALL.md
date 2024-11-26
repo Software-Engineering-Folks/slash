@@ -1,5 +1,5 @@
 
-# Installation Guide for Slash
+# Installation Guide for Slash [Maybe add how to make MongoDB cluster info and how to get credentials for Google OAuth]
 
 Welcome to the installation guide for **Slash**. Follow these steps to set up the environment and run the application.
 
@@ -17,18 +17,25 @@ Ensure you have the following installed:
 Clone the repository from GitHub. Open a terminal and run:
 
 ```bash
-git clone https://github.com/SE-Fall-2024-Team-69/slash.git
+git clone https://github.com/Software-Engineering-Folks/slash.git
 cd slash
 git checkout main
 ```
 
 ## Step 2: Set Up a Virtual Environment (Optional)
 
-Creating a virtual environment is recommended to manage dependencies. Run the following:
+Creating a virtual environment is **recommended** to manage dependencies. Run the following:
 
+### macOS/Linux
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate
+```
+
+### Windows
+```bash
+python -m venv venv
+venv\Scripts\activate
 ```
 
 ## Step 3: Install Dependencies
@@ -39,7 +46,7 @@ Install all required dependencies listed in the `requirements.txt` file:
 pip install -r requirements.txt
 ```
 
-## Step 4: Google OAuth Setup
+## Step 4: Google OAuth Setup [Edit Please]
 
 1. **Google OAuth Client Secrets**: Make sure you have a valid Google OAuth client secrets file.
 2. Place your client secrets JSON file at:
@@ -54,9 +61,15 @@ In the project root directory, create a `.env` file for environment-specific var
 Example `.env` file contents:
 
 ```plaintext
-set FLASK_APP=.\src\modules\app 
+FLASK_APP=.\src\modules\app 
 FLASK_ENV=development
-GOOGLE_CLIENT_SECRET_PATH=C:\Users\Desmond\Desktop\slash\src\client_secret_92320207172-8cnk4c9unfaa7llua906p6kjvhnvkbqd.apps.googleusercontent.com.json
+SECRET_KEY=SECRET_KEY
+GOOGLE_CLIENT_ID=GOOGLE_CLIENT_ID
+GOOGLE_CLIENT_SECRET=GOOGLE_CLIENT_SECRET
+GOOGLE_DISCOVERY_URL=https://accounts.google.com/.well-known/openid-configuration
+GOOGLE_REDIRECT_URI=http://127.0.0.1:5000/login
+MONGO_URI=MONGO_CLUSTER_URI
+DB_NAME=slashdb
 ```
 
 ## Step 6: Run the Application
@@ -66,17 +79,13 @@ After setting up the environment and dependencies, start the Flask application:
 ```bash
 flask run
 ```
+Add ```--debug``` to run in debug mode.
 
 By default, the app will run at `http://127.0.0.1:5000/`.
 
-## Step 7: Additional Configuration
-
-1. **CSV File Management**: The application manages user credentials and wishlist data in CSV files located under `src/users/`.
-2. Ensure your CSV files follow the correct structure to avoid errors in data handling.
-
 ## Troubleshooting
 
-- **Database Issues**: If the app cannot locate or read CSV files, verify the file paths and permissions.
+- **Database Issues**: Run `http://127.0.0.1:5000/test` to test database connection.
 - **OAuth Errors**: Check that your OAuth credentials are valid and stored at the specified location.
 
 ---
