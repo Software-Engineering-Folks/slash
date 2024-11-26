@@ -74,6 +74,7 @@ Now we can add and read comments for more informed decisions.
 
 - Coupon Scraping: Incorporate coupon scraping functionality to help users save even more by automatically finding and applying available discounts.
 - Expanded Scraper Coverage: Add more scrapers to cover a wider range of e-commerce websites, offering users more options and better deals across various platforms.
+- Enhance the application by integrating an AI-powered chatbot using OpenAI's GPT models or other AI services. This chatbot will interact with users to understand their product preferences based on feature descriptions and suggest relevant products sorted by relevancy.
 - UI Improvements? [Edit Please]
 
 
