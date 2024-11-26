@@ -58,7 +58,7 @@ pip install -r requirements.txt
 
 In the project root directory, create a `.env` file for environment-specific variables.
 
-Example `.env` file contents:
+`.env` file contents:
 
 ```plaintext
 FLASK_APP=.\src\modules\app 
@@ -72,7 +72,17 @@ MONGO_URI=MONGO_CLUSTER_URI
 DB_NAME=slashdb
 ```
 
-## Step 6: Run the Application
+## Step 6: Initialize Database
+
+Run the `init_db.py` script to set up the database schema and initial data:
+
+```bash
+python init_db.py
+```
+
+Ensure that your database configuration is correctly set up in your environment variables before running this script.
+
+## Step 7: Run the Application
 
 After setting up the environment and dependencies, start the Flask application:
 
