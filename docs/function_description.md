@@ -197,11 +197,20 @@ Removes an item from a user's wishlist by index.
 ### _def_ share_wishlist(email_sender, wishlist_name, email_receiver, mongo=None):
 Shares a user's wishlist via email.
 
+### def check_user(email, password=None, mongo=None):
+Checks if the user exists in the 'users' collection
 
+### def wishlist_add_item(email, wishlist_name, item_data, mongo=None):
+Adds an item to a user's wishlist and updates the database.
 
+### def read_wishlist(email, wishlist_name, mongo=None):
+Fetches a user's wishlist from the database.
 
+### def wishlist_remove_list(email, wishlist_name, index, mongo=None):
+Removes an item from a user's wishlist by index.
 
-
+### def share_wishlist(email_sender, wishlist_name, email_receiver, mongo=None):
+Shares a user's wishlist via email.
 
 
 
