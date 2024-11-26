@@ -2,7 +2,7 @@
 
 ## Thanks for being here and taking your time to contribute. <br>
 
-The following is a set of guidelines for contributing to "Slash" and its packages, which are hosted in the [Slash](https://github.com/SE23-Team44/slash/) on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request. <br>
+The following is a set of guidelines for contributing to "Slash" and its packages, which are hosted in the [Slash](https://github.com/Software-Engineering-Folks/slash) on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request. <br>
 
 ## Table of Contents
 
