@@ -160,7 +160,6 @@ def add_comment():
 
 @app.route("/filter", methods=["POST", "GET"])
 def product_search_filtered():
-    print("SNEHIL ", request.form, flush=True)
     product = request.args.get("product_name")
     sort = request.form.get("sort")
     currency = request.form.get("currency")
