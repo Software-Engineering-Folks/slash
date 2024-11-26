@@ -14,7 +14,7 @@ The following is a set of guidelines for contributing to "Slash" and its package
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [Code of Conduct](https://github.com/SE23-Team44/slash/blob/main/docs/CODE-OF-CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to Slash.se23@gmail.com.
+This project and everyone participating in it is governed by the [Code of Conduct](https://github.com/SE23-Team44/slash/blob/main/docs/CODE-OF-CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to software.72.engineering@gmail.com
 
 ## How can I Contribute
 
