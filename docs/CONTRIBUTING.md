@@ -6,11 +6,11 @@ The following is a set of guidelines for contributing to "Slash" and its package
 
 ## Table of Contents
 
-[Code of Conduct](https://github.com/SE23-Team44/slash/blob/main/docs/CODE-OF-CONDUCT.md) <br>
-[How can I Contribute](https://github.com/SE23-Team44/slash/blob/main/docs/CONTRIBUTING.md#how-can-i-contribute) <br>
-[Suggesting Enhancements](https://github.com/SE23-Team44/slash/blob/main/docs/CONTRIBUTING.md#suggesting-enhancements) <br>
-[Style Guide](https://github.com/SE23-Team44/slash/blob/main/docs/CONTRIBUTING.md#styleguides) <br>
-[References](https://github.com/SE23-Team44/slash/blob/main/docs/CONTRIBUTING.md#references)
+[Code of Conduct](https://github.com/Software-Engineering-Folks/slash/blob/main/docs/CODE-OF-CONDUCT.md) <br>
+[How can I Contribute](https://github.com/Software-Engineering-Folks/slash/blob/main/docs/CONTRIBUTING.md#how-can-i-contribute) <br>
+[Suggesting Enhancements](https://github.com/Software-Engineering-Folks/slash/blob/main/docs/CONTRIBUTING.md#suggesting-enhancements) <br>
+[Style Guide](https://github.com/Software-Engineering-Folks/slash/blob/main/docs/CONTRIBUTING.md#styleguides) <br>
+[References](https://github.com/Software-Engineering-Folks/slash/blob/main/docs/CONTRIBUTING.md#references)
 
 ## Code of Conduct
 
