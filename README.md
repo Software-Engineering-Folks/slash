@@ -90,8 +90,8 @@ Now we can add and read comments for more informed decisions.
 ---
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/yaswanth67"><img src="https://avatars.githubusercontent.com/u/66238314?v=4" width="75px;" alt=""/><br /><sub><b>Yaswanth Baddi</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/YaswanthMullamuri"><img src="https://avatars.githubusercontent.com/u/55339925?v=4" width="75px;" alt=""/><br /><sub><b>Yaswanth Mullamuri</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/AyushGupta-Code"><img src="https://avatars.githubusercontent.com/u/70428309?v=4" width="75px;" alt=""/><br /><sub><b>Ayush Gupta</b></sub></a></td>
+    <td align="center"><a href="https://github.com/devangsaraogi"><img src="https://avatars.githubusercontent.com/u/70952871?v=4" width="75px;" alt=""/><br /><sub><b>Devang Saraogi</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/omtandel2307"><img src="https://avatars.githubusercontent.com/u/91607099?v=4" width="75px;" alt=""/><br /><sub><b>Om Tandel</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/snehilbehar"><img src="https://avatars.githubusercontent.com/u/54533167?v=4" width="75px;" alt=""/><br /><sub><b>Snehil Behar</b></sub></a></td>
   </tr>
 </table>
