@@ -32,13 +32,13 @@ The following is a list of items you need to check before submitting a bug repor
 
 #### To Submit A Good Bug Report
 
-[GitHub issues](https://guides.github.com/features/issues/) You can track the bugs from this. For the repository that has bug, create an issue and fill out [the template](https://github.com/SE23-Team44/slash/blob/main/docs/bug_report.md) to give details of the bug.
+[GitHub issues](https://guides.github.com/features/issues/) You can track the bugs from this. For the repository that has bug, create an issue and fill out [the template](https://github.com/Software-Engineering-Folks/slash/blob/main/docs/bug_report.md) to give details of the bug.
 
 - To identify the problem, give the issue a clear and informative term. <br>
 - Describe in as much detail as possible to duplicate the problem. Explain the problem and explain about the exact command sused in the terminal which caus ethe bug to occur.
 - To demonstrate the steps, give specific examples. Include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use [Markdown code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
 - Specify what is the problem beavior and what you expected to see and why
-- If possible, include screenshots and animated GIFs that clearly demonstrate the problem. [this tool](https://www.cockos.com/licecap/)- to record GIFs on macOS and Windows, and [this tool](https://github.com/colinkeenan/silentcast) or [this tool](https://github.com/GNOME/byzanz) on Linux.
+- If possible, include screenshots and animated GIFs that clearly demonstrate the problem. [LICEcap](https://www.cockos.com/licecap/)- to record GIFs on macOS and Windows, and [Silentcast](https://github.com/colinkeenan/silentcast) on Linux.
 - To include a crash report, add a stack trace from the operating system. For macOS, `Console.app` under "Diagnostic and usage information" > "User diagnostic reports" has crash report. Include the crash report in the issue in a [code block](https://help.github.com/articles/markdown-basics/#multiple-lines), a [file attachment](https://help.github.com/articles/file-attachments-on-issues-and-pull-requests/), or put it in a [gist](https://gist.github.com/) and provide link to that gist.
 - For performance or memory issues, include a [CPU profile capture](https://flight-manual.atom.io/hacking-atom/sections/debugging/#diagnose-runtime-performance) with your report.
 
@@ -53,7 +53,7 @@ Provide more context by answering these questions: <br>
 ## Suggesting Enhancements
 
 Any suggesting enhancements like adding new features or imporving existing functionalities, etc can done by following the below guidelines. They help maintainers understand your improvement. <br>
-[the template](https://github.com/SE23-Team44/slash/blob/main/docs/feature_report.md)- this template is to be filled to add suggestions. These can include the steps that you imagine you would take if the feature you're requesting existed.
+[the template](https://github.com/Software-Engineering-Folks/slash/blob/main/docs/feature_report.md)- this template is to be filled to add suggestions. These can include the steps that you imagine you would take if the feature you're requesting existed.
 
 ##### Before Submitting An Enhancement Suggestion
 
@@ -62,7 +62,7 @@ Any suggesting enhancements like adding new features or imporving existing funct
 
 #### To Submit A Good Enhancement Suggestion
 
-[GitHub issues](https://guides.github.com/features/issues/) You can track the bugs from this. For the repository that has bug, create an issue and fill out [the template](https://github.com/SE23-Team44/slash/blob/main/docs/bug_report.md) to give details of the bug.
+[GitHub issues](https://guides.github.com/features/issues/) You can track the bugs from this. For the repository that has bug, create an issue and fill out [the template](https://github.com/Software-Engineering-Folks/slash/blob/main/docs/bug_report.md) to give details of the bug.
 
 - To identify the problem, give the issue a clear and informative term. <br>
 - Describe in as much detail as possible to duplicate the problem. Explain the problem and explain about the exact command sused in the terminal which caus ethe bug to occur.
