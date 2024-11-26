@@ -26,17 +26,17 @@ Slash is a powerful tool designed to scrape leading e-commerce websites to find 
 - **Easy**: Slash uses very easy commands to filter, sort and search your items
 - **Powerful**: Quickly alter the commands to get desired results
 <br><br>
-## Watch how our application works: 
+## Watch how our application works: [Edit Please]
 ### Click here to watch - [Youtube Video](https://youtu.be/133EWUQWe5Q) <br>
 <br>
 
-# :rocket: Quick Guide
+# :rocket: Quick Guide [Edit Please]
 
 1. Access the Github repository from your computer. 
  - First, pre-install [git](https://git-scm.com/) on  your machine. 
  - Then, clone the repo using the following command:
  ```
- git clone https://github.com/SE-Fall-2024-Team-69/slash.git
+ git clone https://github.com/Software-Engineering-Folks/slash.git
  ```
  * Finally, ```cd``` into the local repository.
 ```
@@ -71,17 +71,16 @@ flask run
  
 # :dizzy: What's New? (Project 3 Updates)
 
-### Coupon Scrapping
-Now we have implemented coupon scraping to automatically detect and apply the best available discounts from supported platforms, enhancing cost savings for users
-
-### More Websites
-We have expanded support by adding more e-commerce websites, increasing the range of platforms where users can find the best deals 
-
 ### MongoDB
-Our most significant feature upgrade was transitioning from storing data in a CSV file to using MongoDB. This change greatly improved the project's functionality and performance.
+We've significantly enhanced our platform's speed and efficiency by migrating to MongoDB. By leveraging MongoDB, we've significantly improved performance and scalability. This powerful database solution allows us to store and manage data more efficiently, providing a smoother and faster user experience.
 
-### Improved UI
-We have improved the user interface by fixing minor errors in filtering and sorting functionalities, ensuring a smoother and more intuitive user experience.  
+### Coupon Scrapping [Edit Please]
+Now we have implemented coupon scraping to automatically detect and apply the best available discounts from supported platforms, enhancing cost savings for users.
+
+### Wishlists
+Keep track of your desired products by adding them to your wishlist and making shopping more easier.
+
+[Edit Screenshots]
 
 <p align="center"><img width="700" src="./assets/Resultfinal.png"></p>  
 
@@ -98,7 +97,7 @@ Now we can add and read comments for more informed decisions.
 <p align="center"><img width="700" src="./assets/Ui.gif"></p>
 
 
-:movie_camera: Checkout our demo video
+:movie_camera: Checkout our demo video [Edit Please]
 ---
 
 [Click for Demo Video](https://drive.google.com/file/d/1Efehn_X6z4WYxklG2uGirg7ytlanE8Hl/view)
@@ -108,6 +107,7 @@ Now we can add and read comments for more informed decisions.
 
 - Coupon Scraping: Incorporate coupon scraping functionality to help users save even more by automatically finding and applying available discounts.
 - Expanded Scraper Coverage: Add more scrapers to cover a wider range of e-commerce websites, offering users more options and better deals across various platforms.
+- UI Improvements? [Edit Please]
 
 
 :thought_balloon: Use Case
@@ -119,7 +119,7 @@ Now we can add and read comments for more informed decisions.
  For Additional Information direct to this [page](https://github.com/SE-Fall-2024-Team-69/slash/tree/main/docs)  and check all the markdown files 
 
 
-:sparkles: Contributors
+:sparkles: Contributors [Edit Please]
 ---
 <table>
   <tr>
