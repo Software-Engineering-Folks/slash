@@ -115,7 +115,7 @@ Now we can add and read comments for more informed decisions.
 * ***Data Analysts***: Finding data for any project is one of the most tedious job for a data analyst, and the datasets found might not be the most recent one. Using slash, they can create their own dataset in real time and format it as per their needs so that they can focus on what is actually important.
   
 # Additional Information
- For Additional Information direct to this [page](https://github.com/SE-Fall-2024-Team-69/slash/tree/main/docs)  and check all the markdown files 
+ For Additional Information direct to this [page](https://github.com/Software-Engineering-Folks/slash/tree/sfe-readme/docs)  and check all the markdown files 
 
 
 :sparkles: Contributors [Edit Please]
