@@ -42,14 +42,17 @@ For detailed installation and setup instructions, please refer to [INSTALL.md](h
  
 # :dizzy: What's New? (Project 3 Updates)
 
-### MongoDB
+### 1. MongoDB
 Migrated to MongoDB for improved performance, scalability, and faster data handling. By leveraging MongoDB, we've significantly improved performance and scalability. This powerful database solution allows us to store and manage data more efficiently, providing a smoother and faster user experience.
 
-### Coupon Scrapping [Edit Please]
-Integrated coupon scraping to detect and apply the best discounts automatically.
-
-### Wishlists
+### 2. Wishlists
 Keep track of your desired products by adding them to your wishlist and making shopping more easier.
+
+### 3. Deals of the day
+Added a "Deals of the Day" section on the homepage that dynamically scrapes and displays unique, updated daily deals to enhance user engagement
+
+### 4. UI and Bugs Fixes
+Implemented UI enhancements on the homepage and fixed bugs related to filtering, sorting, wishlist functionality, and comments to improve the website's usability and performance.
 
 [Edit Screenshots]
 
