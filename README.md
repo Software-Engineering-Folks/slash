@@ -1,6 +1,6 @@
 # Slash Your Spending, Not Your Style - Unleash the Best Deals!!
 
-<p align="center"><img width="1000" src="./assets/intro.gif"></p>
+<p align="center"><img width="1000" src="./assets/ui.gif"></p>
 
 [![GitHub license](https://img.shields.io/github/license/SE-Fall-2024-Team-69/slash)](https://github.com/SE-Fall-2024-Team-69/slash/blob/main/LICENSE)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14029366.svg)](https://doi.org/10.5281/zenodo.14029366)

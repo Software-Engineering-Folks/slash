@@ -1,7 +1,21 @@
 
-# Installation Guide for Slash [Maybe add how to make MongoDB cluster info and how to get credentials for Google OAuth]
+# Installation Guide for Slash
 
 Welcome to the installation guide for **Slash**. Follow these steps to set up the environment and run the application.
+
+## Table of Contents
+- [Installation Guide for Slash](#installation-guide-for-slash)
+  - [Table of Contents](#table-of-contents)
+  - [Prerequisites](#prerequisites)
+  - [Step 1: Clone the Repository](#step-1-clone-the-repository)
+  - [Step 2: Set Up a Virtual Environment (Optional)](#step-2-set-up-a-virtual-environment-optional)
+  - [Step 3: Install Dependencies](#step-3-install-dependencies)
+  - [Step 4: MongoDB Setup](#step-4-mongodb-setup)
+  - [Step 5: Google OAuth Setup](#step-5-google-oauth-setup)
+  - [Step 6: Configure Environment Variables](#step-6-configure-environment-variables)
+  - [Step 7: Initialize Database](#step-7-initialize-database)
+  - [Step 8: Run the Application](#step-8-run-the-application)
+  - [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -27,13 +41,13 @@ git checkout main
 
 Creating a virtual environment is **recommended** to manage dependencies. Run the following:
 
-### macOS/Linux
+**macOS/Linux**
 ```bash
 python -m venv venv
 source venv/bin/activate
 ```
 
-### Windows
+**Windows**
 ```bash
 python -m venv venv
 venv\Scripts\activate
@@ -47,19 +61,35 @@ Install all required dependencies listed in the `requirements.txt` file:
 pip install -r requirements.txt
 ```
 
-## Step 4: Google OAuth Setup
+## Step 4: MongoDB Setup
+If you're using MongoDB Atlas, follow these steps to set up your cluster:
 
-1. **Obtain Google OAuth Credentials**: 
-   - Go to the [Google Cloud Console](https://console.cloud.google.com/).
-   - Create a new project or use an existing one.
-   - Navigate to **APIs & Services** > **Credentials** and click **Create Credentials** > **OAuth 2.0 Client IDs**.
-   - Set the application type to **Web application**.
-   - Specify `http://127.0.0.1:5000/login` as the redirect URI.
-   - Download the JSON file containing the client secrets.
+1. Log in to [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
+2. Create a free cluster and choose your cloud provider and region.
+3. Set up a username and password for your database.
+4. Check for IP Address in Access List and **Whitelist** your IP address:
+   - Navigate to **Network Access** in the Security section and add your IP.
+5. Obtain the MongoDB connection string:
+   - Go to **Clusters > Connect > Connect Your Application**.
+   - Copy the connection string and replace `<password>` with your database password.
 
-2. **Client Secrets File**: Place the downloaded JSON file in ```src``` directory.
+## Step 5: Google OAuth Setup
 
-## Step 5: Configure Environment Variables
+1. **Log in to Google Cloud Console:**
+   - Visit the [Google Cloud Console](https://console.cloud.google.com/).
+2. **Create or Select a Project:**
+   - Create a new project or choose an existing one.
+3. **Enable OAuth Credentials:**
+   - Navigate to **APIs & Services > Credentials**.
+   - Click **Create Credentials > OAuth 2.0 Client IDs**.
+   - Configure the consent screen and set the application type to **Web Application**.
+4. **Add Redirect URIs:**
+   - Add `http://127.0.0.1:5000/login` under redirect URIs.
+5. **Download Credentials:**
+   - Save the generated JSON file and place it in the `src` directory.
+
+
+## Step 6: Configure Environment Variables
 
 In the project root directory, create a `.env` file for environment-specific variables.
 
@@ -77,7 +107,7 @@ MONGO_URI=MONGO_CLUSTER_URI
 DB_NAME=slashdb
 ```
 
-## Step 6: Initialize Database
+## Step 7: Initialize Database
 
 Run the `init_db.py` script to set up the database schema and initial data:
 
@@ -86,7 +116,7 @@ python init_db.py
 ```
 Ensure that your database configuration is correctly set up in your environment variables before running this script.
 
-## Step 7: Run the Application
+## Step 8: Run the Application
 
 After setting up the environment and dependencies, start the Flask application:
 
@@ -100,9 +130,16 @@ By default, the app will run at `http://127.0.0.1:5000/`. Ensure Flask picks up 
 
 ## Troubleshooting
 
-- **Database Issues**: Run `http://127.0.0.1:5000/test` to test database connection.
-- **OAuth Errors**: Check that your OAuth credentials are valid and stored at the specified location.
-- **Environment Variable [Mac Users only]**: Run ```source .env``` after updated .env file.
+- **Database Connection Issues:** 
+  - Ensure the `MONGO_URI` in `.env` is correct.
+  - Check that your MongoDB cluster allows connections from your IP address.
+
+- **OAuth Errors:** 
+  - Verify that the Google OAuth credentials are in the correct location (`src` directory).
+  - Check that the redirect URI matches `http://127.0.0.1:5000/login`.
+
+- **Environment Variables Not Loading:** 
+  - On macOS/Linux, run `source .env` to load variables.
 
 ---
 
