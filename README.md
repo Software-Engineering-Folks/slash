@@ -1,7 +1,6 @@
-# SLASH
-Slash Your Spending, Not Your Style - Unleash the Best Deals!!
+# Slash Your Spending, Not Your Style - Unleash the Best Deals!!
 
-<p align="center"><img width="500" src="./assets/Shop.gif"></p>
+<p align="center"><img width="1000" src="./assets/intro.gif"></p>
 
 [![GitHub license](https://img.shields.io/github/license/SE-Fall-2024-Team-69/slash)](https://github.com/SE-Fall-2024-Team-69/slash/blob/main/LICENSE)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14029366.svg)](https://doi.org/10.5281/zenodo.14029366)
@@ -20,55 +19,42 @@ Slash Your Spending, Not Your Style - Unleash the Best Deals!!
 <a href="https://github.com/SE23-Team44/slasg/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/SE23-Team44/slash"></a>
 ![Discord](https://img.shields.io/discord/1162231656980168876)
 
-Slash is a powerful tool designed to scrape leading e-commerce websites to find the best deals on products you're searching for. It currently supports popular platforms including [Walmart](https://www.walmart.com/), [Target](https://www.target.com/), [BestBuy](https://www.bestbuy.com/),  [Amazon](https://www.amazon.com/), [Google Shopping](https://shopping.google.com/),  [BJs](https://www.bjs.com/),  [Etsy](https://www.etsy.com/), and [EBay](https://www.ebay.com/).
-- **Fast**: With slash, you can save over 50% of your time by comparing deals across websites within seconds
-- **Easy**: Slash uses very easy commands to filter, sort and search your items
-- **Powerful**: Quickly alter the commands to get desired results
+<h2> What is Slash Exactly? </h2>
 
-# :rocket: Quick Guide
+Slash is a web-scraping tool that aggregates the best deals from leading e-commerce platforms like [Walmart](https://www.walmart.com/), [Target](https://www.target.com/), [BestBuy](https://www.bestbuy.com/),  [Amazon](https://www.amazon.com/), [Google Shopping](https://shopping.google.com/),  [BJs](https://www.bjs.com/),  [Etsy](https://www.etsy.com/), and [EBay](https://www.ebay.com/).
+- **Fast**: Save time by comparing deals across websites instantly.
+- **Easy**: Use straightforward commands to filter and sort items.
+- **Powerful**: Tailor your searches to get precise results quickly.
 
-1. Access the Github repository from your computer. 
- - First, pre-install [git](https://git-scm.com/) on  your machine. 
- - Then, clone the repo using the following command:
- ```
- git clone https://github.com/SE-Fall-2024-Team-69/slash.git
- ```
- * Finally, ```cd``` into the local repository.
-```
-cd slash
-```
-2. Install the ```requirements.txt```. 
-- This project uses Python 3, so make sure that [Python](https://www.python.org/downloads/) and [Pip](https://pip.pypa.io/en/stable/installation/) are preinstalled.
-- Install the ```requirements.txt``` file using pip.
-```
-pip3 install -r requirements.txt
-```
-3. Running the program
+## Flowchart of Slash
+<p align="center"><img width="1000" src="./assets/proj3.drawio.png"></p>
 
-- Set the environmental variable using either of the following commands:
- ```
-MAC
-export FLASK_APP=./src/modules/app
-flask run
+:movie_camera: Watch Our Demo Video
+---
 
-Windows Command Prompt
-set FLASK_APP=.\src\modules\app 
-flask run
+[![Click for Demo Video](https://img.youtube.com/vi/4onZmZjepvI/maxresdefault.jpg)](https://youtu.be/4onZmZjepvI)
 
-Windows Powershell
-$Env:FLASK_APP='.\src\modules\app'
-flask run
-```
+# :rocket: Installation
 
-4. Once flask is running, open your internet browser and type ```http://127.0.0.1:5000/``` into the search bar.
+For detailed installation and setup instructions, please refer to [INSTALL.md](https://github.com/Software-Engineering-Folks/slash/blob/sfe-master/INSTALL.md).
 
 <p>
  
 # :dizzy: What's New? (Project 3 Updates)
 
-### Enhanced UI
+### 1. MongoDB
+Migrated to MongoDB for improved performance, scalability, and faster data handling. By leveraging MongoDB, we've significantly improved performance and scalability. This powerful database solution allows us to store and manage data more efficiently, providing a smoother and faster user experience.
 
-New grid UI with product images for a smoother shopping experience.  
+### 2. Wishlists
+Keep track of your desired products by adding them to your wishlist and making shopping more easier.
+
+### 3. Deals of the day
+Added a "Deals of the Day" section on the homepage that dynamically scrapes and displays unique, updated daily deals to enhance user engagement
+
+### 4. UI and Bugs Fixes
+Implemented UI enhancements on the homepage and fixed bugs related to filtering, sorting, wishlist functionality, and comments to improve the website's usability and performance.
+
+[Edit Screenshots]
 
 <p align="center"><img width="700" src="./assets/Resultfinal.png"></p>  
 
@@ -85,33 +71,38 @@ Now we can add and read comments for more informed decisions.
 <p align="center"><img width="700" src="./assets/Ui.gif"></p>
 
 
-:movie_camera: Checkout our demo video
----
+# :muscle: What's Next for future development?
 
-[Click for Demo Video](https://youtu.be/4onZmZjepvI)
+- **General Enhancements**
+  - **Caching Scraped Results**: Running the scraper over and over again to fetch the same product is computationally expensive. Introducing a caching system can improve the user experience.
+  - **Comparison with Similar Products**: Give users the oppurtunity to compare similar products by comprehensively displaying their features next to each other.
+  - **UI Improvements**: Enhancing the user interface by adopting a consistent design language across the website for a cohesive look and feel.
+  - **Login Implementation**: Give users the oppurutunity to login without Google services.
+- **Chatbot**: Enhance the application by integrating an AI-powered chatbot using OpenAI's GPT models or other AI services. This chatbot will interact with users to understand their product preferences based on feature descriptions and suggest relevant products sorted by relevancy.
+- **Price Tracking and Alerts**: Implementing a feature to track product prices over time and notify users of price changes.
+- **Wishlist Enhancements**
+  - **Multi-Wishlist**: The wishlist functionality can be further enhanced to incorporate different wishlists so that the user can have different wishlists catering to different products.
+  - **Wishlist-Based Recommendations**: Introducing personalized product recommendations based on items added to the user's wishlist.
+  - **Improved Wishlist Sharing**: Improving Sharing of Wishlists.
+- **Coupon Scraping**: Incorporate coupon scraping functionality to help users save even more by automatically finding and applying available discounts.
 
-
-# :muscle: What's next for future development?
-
-- Coupon Scraping: Incorporate coupon scraping functionality to help users save even more by automatically finding and applying available discounts.
-- Expanded Scraper Coverage: Add more scrapers to cover a wider range of e-commerce websites, offering users more options and better deals across various platforms.
 
 
 :thought_balloon: Use Case
 ---
 * ***Students***: Students coming to university are generally on a budget and time constraint and generally spend hours wasting time to search for products on Websites. Slash is the perfect tool for these students that slashes all the unnecessary details on a website and helps them get prices for a product across multiple websites.Make the most of this tool in the upcoming Black Friday Sale.
-* ***Data Analysts***: Finding data for any project is one of the most tedious job for a data analyst, and the datasets found might not be the most recent one. Using slash, they can create their own dataset in real time and format it as per their needs so that they can focus on what is actually inportant.
+* ***Data Analysts***: Finding data for any project is one of the most tedious job for a data analyst, and the datasets found might not be the most recent one. Using slash, they can create their own dataset in real time and format it as per their needs so that they can focus on what is actually important.
   
 # Additional Information
- For Additional Information direct to this [page](https://github.com/SE-Fall-2024-Team-69/slash/tree/main/docs)  and check all the markdown files 
+ For Additional Information direct to this [page](https://github.com/Software-Engineering-Folks/slash/tree/sfe-master/docs)  and check all the markdown files.
 
 
 :sparkles: Contributors
 ---
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/yaswanth67"><img src="https://avatars.githubusercontent.com/u/66238314?v=4" width="75px;" alt=""/><br /><sub><b>Yaswanth Baddi</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/YaswanthMullamuri"><img src="https://avatars.githubusercontent.com/u/55339925?v=4" width="75px;" alt=""/><br /><sub><b>Yaswanth Mullamuri</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/AyushGupta-Code"><img src="https://avatars.githubusercontent.com/u/70428309?v=4" width="75px;" alt=""/><br /><sub><b>Ayush Gupta</b></sub></a></td>
+    <td align="center"><a href="https://github.com/devangsaraogi"><img src="https://avatars.githubusercontent.com/u/70952871?v=4" width="75px;" alt=""/><br /><sub><b>Devang Saraogi</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/omtandel2307"><img src="https://avatars.githubusercontent.com/u/91607099?v=4" width="75px;" alt=""/><br /><sub><b>Om Tandel</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/snehilbehar"><img src="https://avatars.githubusercontent.com/u/54533167?v=4" width="75px;" alt=""/><br /><sub><b>Snehil Behar</b></sub></a></td>
   </tr>
 </table>
