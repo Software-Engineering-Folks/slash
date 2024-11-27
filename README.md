@@ -77,7 +77,7 @@ flask run
 :movie_camera: Checkout our demo video
 ---
 
-[Click for Demo Video](https://drive.google.com/file/d/1Efehn_X6z4WYxklG2uGirg7ytlanE8Hl/view)
+[Click for Demo Video](https://www.youtube.com/watch?v=4onZmZjepvI)
 
 
 # :muscle: What's next for future development?
