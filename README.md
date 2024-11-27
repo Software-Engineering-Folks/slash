@@ -54,6 +54,7 @@ Added a "Deals of the Day" section on the homepage that dynamically scrapes and 
 ### 4. UI and Bugs Fixes
 Implemented UI enhancements on the homepage and fixed bugs related to filtering, sorting, wishlist functionality, and comments to improve the website's usability and performance.
 
+# :camera: Screenshots 
 <p align="center"><img width="700" src="./assets/Screenshot1_LandingPage.jpg"></p>  
 
 Landing Page 
