@@ -29,13 +29,10 @@ Slash is a web-scraping tool that aggregates the best deals from leading e-comme
 ## Flowchart of Slash
 <p align="center"><img width="1000" src="./assets/proj3.drawio.png"></p>
 
-
 :movie_camera: Watch Our Demo Video
 ---
 
 [![Click for Demo Video](https://img.youtube.com/vi/4onZmZjepvI/maxresdefault.jpg)](https://youtu.be/4onZmZjepvI)
-
-<br>
 
 # :rocket: Installation
 
