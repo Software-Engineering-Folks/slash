@@ -29,11 +29,11 @@ Slash is a web-scraping tool that aggregates the best deals from leading e-comme
 ## Flowchart of Slash
 <p align="center"><img width="1000" src="./assets/proj3.drawio.png"></p>
 
-<br><br>
+
 :movie_camera: Checkout our demo video [Edit Please]
 ---
 
-[Click for Demo Video](https://drive.google.com/file/d/1Efehn_X6z4WYxklG2uGirg7ytlanE8Hl/view)
+[Click for Demo Video](https://youtu.be/4onZmZjepvI)
 <br>
 
 # :rocket: Installation
@@ -71,6 +71,7 @@ Now we can add and read comments for more informed decisions.
 ### User login with Google OAuth   
  
 <p align="center"><img width="700" src="./assets/Ui.gif"></p>
+
 
 # :muscle: What's Next for future development?
 
