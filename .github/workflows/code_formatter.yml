@@ -21,4 +21,4 @@ jobs:
           pip install autopep8
 
       - name: Run autopep8 Check
-        run: autopep8 --diff --recursive .  # Shows diffs without making changes
+        run: autopep8 --diff --recursive .
