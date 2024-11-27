@@ -1,10 +1,3 @@
-<!--
-Copyright (C) 2023 SE23-Team44
-
-Licensed under the MIT License.
-See the LICENSE file in the project root for the full license information.
--->
-
 <!doctype html>
 <html lang="en">
 
@@ -16,7 +9,7 @@ See the LICENSE file in the project root for the full license information.
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/wishlist.css') }}">
-    <title>Searching</title>
+    <title>My Wishlist</title>
 </head>
 
 <body data-spy="scroll" data-target="#efec-scroll" data-offset="10">
@@ -27,7 +20,7 @@ See the LICENSE file in the project root for the full license information.
         <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
             <ul id="ulone" class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="login">Home</a>
+                    <a class="nav-link" href="homepage">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="wishlist">Wishlist</a>
@@ -60,7 +53,6 @@ See the LICENSE file in the project root for the full license information.
     </nav>
     <br><br><br>
     <div class="results">
-
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <table border='1' class="item-list">
@@ -78,21 +70,18 @@ See the LICENSE file in the project root for the full license information.
                     </tr>
                 </thead>
                 <tbody>
-
-                    {% for product in data %}
+                    {% for product in items %}
                     <tr>
                         <td>{{ loop.index }}</td>
-                        <td><a href={{product.link}} target="_blank">{{product.title}}</a></td>
-                        <td>{{product.price}}</td>
-                        <td>{{product.website}}</td>
-                        <td>{{product.rating}}</td>
-                        <td> <span class="delete-icon" data-index="{{ loop.index }}"
-                                onclick="deleteItem(this)">&#x1F5D1;</span>
+                        <td><a href="{{ product.link }}" target="_blank">{{ product.title }}</a></td>
+                        <td>{{ product.price }}</td>
+                        <td>{{ product.website }}</td>
+                        <td>{{ product.rating }}</td>
+                        <td>
+                            <span class="delete-icon" data-index="{{ loop.index0 }}" onclick="deleteItem(this)">&#x1F5D1;</span>
                         </td>
                     </tr>
-
                     {% endfor %}
-
                 </tbody>
             </table>
             <form id="rm-wishlist-item" action="/delete-wishlist-item" method="post" hidden>
@@ -185,14 +174,21 @@ See the LICENSE file in the project root for the full license information.
                 localStorage.setItem("dark", false);
             }
         })
-        function deleteItem(deleteIcon) {
-            let index = deleteIcon.dataset["index"]
-            rm_form = document.forms["rm-wishlist-item"]
-            rm_form["index"].value = index - 1 // -1 as index in list starts at 0
-            rm_form.submit()
-            // Find the parent <li> element and remove it
-            //var tableRow = deleteIcon.closest('tr');
-            //tableRow.parentElement.removeChild(tableRow);
+        function deleteItem(element) {
+            const index = element.getAttribute('data-index');
+
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = "{{ url_for('remove_wishlist_item') }}";
+            
+            const indexInput = document.createElement('input');
+            indexInput.type = 'hidden';
+            indexInput.name = 'index';
+            indexInput.value = index;
+            
+            form.appendChild(indexInput);
+            document.body.appendChild(form);
+            form.submit();
         }
     </script>
 </body>

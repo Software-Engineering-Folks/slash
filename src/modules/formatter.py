@@ -97,6 +97,15 @@ def sortList(arr, sortBy, reverse):
         return arr.sort_values(by=["rating"], ascending=reverse)
     return arr
 
+def filterList(arr, min_price, max_price, min_rating):
+    if min_price:
+        arr = arr[arr["price"].apply(lambda x: getNumbers(x)) >= min_price]
+    if max_price:
+        arr = arr[arr["price"].apply(lambda x: getNumbers(x)) <= max_price]
+    if min_rating:
+        arr = arr[arr["rating"] >= min_rating]
+    return arr
+
 
 def formatSearchQuery(query):
     return query.replace(" ", "+") if query else ""

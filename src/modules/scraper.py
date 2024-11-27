@@ -36,9 +36,6 @@ def httpsGet(URL):
     soup = BeautifulSoup(page.content, "html.parser")
     return BeautifulSoup(soup.prettify(), "html.parser")
 
-
-
-
 def searchAmazon(query, df_flag, currency):
     """
     Scrapes amazon.com for products matching the search query.
@@ -125,6 +122,7 @@ def google_scraper(link):
     except Exception as e:
         print(f'There was an error in scraping {link}, Error is {e}')
         return None
+    
     
 def walmart_scraper(link):
     try:
@@ -510,9 +508,7 @@ def filter(data, price_min = None, price_max = None, rating_min = None):
     return filtered_result
 
 
-def driver(
-    product, currency, num=None, df_flag=0, csv=False, cd=None, ui=False, sort=None
-):
+def driver(product, currency, num=None, df_flag=0, csv=False, cd=None, ui=False, sort=None):
     """Returns csv is the user enters the --csv arg,
     else will display the result table in the terminal based on the args entered by the user"""
 
@@ -598,3 +594,169 @@ def driver(
             )
             print(result_condensed)
     return result_condensed
+
+def getDeals():
+    """
+    Scrapes various websites for deals of the day.
+    """
+    products_1 = searchAmazonDeals()
+    products_2 = searchWalmartDeals()
+    products_3 = searchBJsDeals()
+    products_4 = searchBestbuyDeals()
+    products_5 = searchTargetDeals()
+    products_6 = searchEbayDeals()
+    products_7 = searchGoogleShoppingDeals()
+
+    results = products_1 + products_2 + products_3 + products_4 + products_5 + products_6 + products_7
+    return results
+
+def searchAmazonDeals():
+    """
+    Scrapes amazon.com for deals of the day.
+    """
+    URL = "https://www.amazon.com/gp/goldbox"
+    page = httpsGet(URL)
+    results = page.findAll("div", {"class": "DealContent-module__truncate_sWbxETx42ZPStTc9jwySW"})
+    deals = []
+
+    for res in results:
+        titles = res.select("h2 a span")
+        prices = res.select("span.a-price span")
+        links = res.select("h2 a.a-link-normal")
+        img_links = res.select("img")
+
+        for i in range(len(titles)):
+            title = titles[i].text
+            price = prices[i].text
+            link = "https://www.amazon.com" + links[i]["href"]
+            img_link = img_links[i]["src"]
+            deals.append({
+                'title': title,
+                'price': price,
+                'link': link,
+                'img_link': img_link
+            })
+    return deals
+
+def searchWalmartDeals():
+    """
+    Scrapes walmart.com for deals of the day.
+    """
+    URL = "https://www.walmart.com/deals"
+    page = httpsGet(URL)
+    results = page.findAll("div", {"class": "flex flex-column items-center relative"})
+
+    deals = []
+
+    for res in results:
+        titles = res.select("span")
+        prices = res.select("div")
+        links = res.select("a")
+        img_links = res.select("img")
+
+        deals.append({
+            'title': titles,
+            'price': prices,
+            'link': links,
+            'img_link': img_links
+        })
+    return deals
+
+def searchBJsDeals():
+    url = 'https://www.bjs.com/deals?source=megamenu&linkName=All%20Deals'
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    
+    deals = []
+    for item in soup.select('.product-tile'):
+        title = item.select_one('.product-title').text.strip()
+        price = item.select_one('.price').text.strip()
+        link = item.select_one('a')['href']
+        img_link = item.select_one('img')['src']
+        deals.append({
+            'title': title,
+            'price': price,
+            'link': link,
+            'img_link': img_link
+        })
+    return deals
+
+def searchBestbuyDeals():
+    url = 'https://www.bestbuy.com/site/searchpage.jsp?st=deals'
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    
+    deals = []
+    for item in soup.select('.sku-item'):
+        title = item.select_one('.sku-title').text.strip()
+        price = item.select_one('.priceView-customer-price span').text.strip()
+        link = 'https://www.bestbuy.com' + item.select_one('a')['href']
+        img_link = item.select_one('img')['src']
+        deals.append({
+            'title': title,
+            'price': price,
+            'link': link,
+            'img_link': img_link
+        })
+    return deals
+
+def searchTargetDeals():
+    url = 'https://www.target.com/c/top-deals/-/N-4xw74'
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    
+    deals = []
+    for item in soup.select('.h-padding-a-tight'):
+        title = item.select_one('.h-text-bs').text.strip()
+        price = item.select_one('.h-text-bs').text.strip()
+        link = 'https://www.target.com' + item.select_one('a')['href']
+        img_link = item.select_one('img')['src']
+        deals.append({
+            'title': title,
+            'price': price,
+            'link': link,
+            'img_link': img_link
+        })
+    return deals
+
+def searchEbayDeals():
+    url = 'https://www.ebay.com/deals'
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    
+    deals = []
+    for item in soup.select('.dne-itemtile'):
+        try:
+            title = item.select_one('.dne-itemtile-title').text.strip()
+            price = item.select_one('.dne-itemtile-price').text.strip()
+            link = item.select_one('a')['href']
+            img_link = item.select_one('.dne-itemtile-imagewrapper img')['src']
+            price = price.rstrip('See all trending deals')
+            deals.append({
+                'title': title,
+                'price': price,
+                'link': link,
+                'img_link': img_link
+            })
+        except:
+            continue
+    return deals
+
+def searchGoogleShoppingDeals():
+    url = 'https://shopping.google.com'
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, 'html.parser')
+    
+    deals = []
+    for item in soup.select('.sh-dgr__content'):
+        title = item.select_one('.sh-dgr__title').text.strip()
+        price = item.select_one('.sh-dgr__price').text.strip()
+        link = item.select_one('a')['href']
+        img_link = item.select_one('img')['src']
+        deals.append({
+            'title': title,
+            'price': price,
+            'link': link,
+            'img_link': img_link
+        })
+    return deals

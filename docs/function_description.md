@@ -176,11 +176,26 @@ Adds the item to the wishlist
 ### *def read_wishlist(username, wishlist_name)*:
 Returns the wishlist with all items in it
 
- *def wishlist_remove_list(username, wishlist_name, indx)*:
+### *def wishlist_remove_list(username, wishlist_name, indx)*:
 Deletes the item from the wishlist
 
-### def create_user(email, password=None, name=None, mongo=None):
+### _def_ create_user(email, password=None, name=None, mongo=None):
 Creates and stores user information in the database.
+
+### _def_ check_user(email, password=None, mongo=None):
+Checks if the user exists in the 'users' collection
+
+### _def_ wishlist_add_item(email, wishlist_name, item_data, mongo=None):
+Adds an item to a user's wishlist and updates the database.
+
+### _def_ read_wishlist(email, wishlist_name, mongo=None):
+Fetches a user's wishlist from the database.
+
+### _def_ wishlist_remove_list(email, wishlist_name, index, mongo=None):
+Removes an item from a user's wishlist by index.
+
+### _def_ share_wishlist(email_sender, wishlist_name, email_receiver, mongo=None):
+Shares a user's wishlist via email.
 
 ### def check_user(email, password=None, mongo=None):
 Checks if the user exists in the 'users' collection
