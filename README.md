@@ -74,7 +74,7 @@ Now we can add and read comments for more informed decisions.
 :movie_camera: Checkout our demo video [Edit Please]
 ---
 
-[Click for Demo Video](https://drive.google.com/file/d/1Efehn_X6z4WYxklG2uGirg7ytlanE8Hl/view)
+[Click for Demo Video](https://youtu.be/4onZmZjepvI)
 
 
 # :muscle: What's Next for future development?
