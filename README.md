@@ -72,18 +72,11 @@ New grid UI with product images for a smoother shopping experience.
 
 <p align="center"><img width="700" src="./assets/Resultfinal.png"></p>  
 
+# Deals of the Day
+![Screenshot 2024-11-26 at 11 33 26 PM](https://github.com/user-attachments/assets/2b7d1fea-f188-40da-bb37-7866740b09fb)
 
-
-Now we can add and read comments for more informed decisions.  
-
-<p align="center"><img width="700" src="./assets/comments.gif"></p>  
-
-
-
-### User login with Google OAuth   
- 
-<p align="center"><img width="700" src="./assets/Ui.gif"></p>
-
+# Better and easier to Navigate UI
+![Screenshot 2024-11-26 at 11 36 53 PM](https://github.com/user-attachments/assets/2e731947-0f94-4aad-a4a7-64a23e94480e)
 
 :movie_camera: Checkout our demo video
 ---
