@@ -82,7 +82,9 @@ Now we can add and read comments for more informed decisions.
 - Chatbot: Enhance the application by integrating an AI-powered chatbot using OpenAI's GPT models or other AI services. This chatbot will interact with users to understand their product preferences based on feature descriptions and suggest relevant products sorted by relevancy.
 - Price Tracking: Implementing a feature to track product prices over time and notify users of price changes.
 - UI Improvements: Enhancing the user interface by adopting a consistent design language across the website for a cohesive look and feel.
-- Wishlist-Based Recommendations: Introducing personalized product recommendations based on items added to the user's wishlist.
+- Wishlist Enhancements
+  - Multi-Wishlist for Single User: The wishlist functionality can be further enhanced to incorporate different wishlists so that the user can have different wishlists catering to different products.
+  - Wishlist-Based Recommendations: Introducing personalized product recommendations based on items added to the user's wishlist.
 - Coupon Scraping: Incorporate coupon scraping functionality to help users save even more by automatically finding and applying available discounts.
 
 
