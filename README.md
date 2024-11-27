@@ -54,22 +54,23 @@ Added a "Deals of the Day" section on the homepage that dynamically scrapes and 
 ### 4. UI and Bugs Fixes
 Implemented UI enhancements on the homepage and fixed bugs related to filtering, sorting, wishlist functionality, and comments to improve the website's usability and performance.
 
-[Edit Screenshots]
+<p align="center"><img width="700" src="./assets/Screenshot1_LandingPage"></p>  
+Landing Page 
 
-<p align="center"><img width="700" src="./assets/Resultfinal.png"></p>  
+<p align="center"><img width="700" src="./assets/Screenshot2_GoogleAuth"></p>  
+Integrated Google Authorization
 
+<p align="center"><img width="700" src="./assets/Screenshot3_HomePage_Deals"></p>  
+New Feature: Deals of the Day on HomePage
 
+<p align="center"><img width="700" src="./assets/Screenshot4_SearchResults"></p>  
+Search Results after scraping popular E-Commerce Websites
 
-Now we can add and read comments for more informed decisions.  
+<p align="center"><img width="700" src="./assets/Screenshot5_Wishlists"></p>  
+New Feature: Wishlists
 
-<p align="center"><img width="700" src="./assets/comments.gif"></p>  
-
-
-
-### User login with Google OAuth   
- 
-<p align="center"><img width="700" src="./assets/Ui.gif"></p>
-
+<p align="center"><img width="700" src="./assets/Screenshot6_Commenting"></p>  
+Feature Upgrade: Commenting
 
 # :muscle: What's Next for future development?
 
