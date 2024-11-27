@@ -167,24 +167,23 @@
             </div>
             <div class="modal-body">
               {% if comments[product.title] %}
-              <h6>Previous Comments:</h6>
-              <ul>
-                {% for comment in comments[product.title] %}
-                <li><strong>{{ comment.username }}:</strong> {{ comment.comment }}</li>
-                {% endfor %}
-              </ul>
+                  <div class="comments-list">
+                      <h6>Previous Comments:</h6>
+                      {% for comment in comments[product.title] %}
+                      <li>
+                          <strong>{{ comment.username }}:</strong> {{ comment.comment }}
+                      </li>
+                      {% endfor %}
+                  </div>
               {% else %}
-              <p>No comments yet.</p>
+                  <div class="comments-list">No comments yet.</div>
               {% endif %}
 
               <!-- Add New Comment Form -->
-              <form action="/add_comment" method="POST">
-                <input type="hidden" name="product_name" value="{{ product.title }}">
-                <div class="form-group">
-                  <label for="comment">Your Comment:</label>
-                  <textarea class="form-control" id="comment" name="comment" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit Comment</button>
+              <form id="commentForm{{ loop.index }}" class="comment-form" onsubmit="return false">
+                  <input type="hidden" name="product_name" value="{{ product.title }}">
+                  <textarea name="comment" class="form-control" placeholder="Your Comment:" required></textarea>
+                  <button type="button" onclick="submitComment('{{ product.title }}', '{{ loop.index }}')" class="btn btn-primary mt-2">Submit Comment</button>
               </form>
             </div>
           </div>
@@ -193,6 +192,46 @@
       {% endfor %}
     </div>
   </div>
+
+  <script>
+    function submitComment(productTitle, index) {
+        const form = document.getElementById(`commentForm${index}`)
+        const commentInput = form.querySelector('textarea')
+        const commentsList = form.closest('.modal-body').querySelector('.comments-list')
+
+        const formData = new FormData();
+        formData.append('product_name', productTitle)
+        formData.append('comment', commentInput.value)
+
+        fetch('/add_comment', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                const newCommentElement = document.createElement('li')
+                newCommentElement.innerHTML = `<strong>${data.comment.username}:</strong> ${data.comment.comment}`
+
+                if (commentsList.textContent.trim() === 'No comments yet.') {
+                    commentsList.innerHTML = '<h6>Previous Comments:</h6>'
+                }
+
+                commentsList.appendChild(newCommentElement)
+
+                commentInput.value = ''
+            } else {
+                alert(data.message || 'Failed to submit comment')
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while submitting the comment')
+        })
+
+        return false
+    }
+  </script>
 
   <script>
     async function sendMessage() {

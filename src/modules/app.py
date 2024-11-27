@@ -149,14 +149,28 @@ def add_comment():
     comment = request.form.get('comment')
     username = session.get('username')
 
-    if product_name and comment and username:
-        mongo.db.comments.insert_one({
+    if not username:
+        return jsonify({"status": "error", "message": "User not logged in"}), 401
+
+    if product_name and comment:
+        new_comment = {
             "product_name": product_name,
             "username": username,
             "comment": comment,
             "commented_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        }
+        mongo.db.comments.insert_one(new_comment)
+        
+        return jsonify({
+            "status": "success", 
+            "comment": {
+                "username": username,
+                "comment": comment,
+                "commented_at": new_comment["commented_at"]
+            }
         })
-    return redirect(url_for('search'))
+    
+    return jsonify({"status": "error", "message": "Invalid comment"}), 400
 
 @app.route("/filter", methods=["POST", "GET"])
 def product_search_filtered():
