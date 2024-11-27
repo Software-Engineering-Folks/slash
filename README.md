@@ -55,21 +55,27 @@ Added a "Deals of the Day" section on the homepage that dynamically scrapes and 
 Implemented UI enhancements on the homepage and fixed bugs related to filtering, sorting, wishlist functionality, and comments to improve the website's usability and performance.
 
 <p align="center"><img width="700" src="./assets/Screenshot1_LandingPage.jpg"></p>  
+
 Landing Page 
 
 <p align="center"><img width="700" src="./assets/Screenshot2_GoogleAuth.jpg"></p>  
+
 Integrated Google Authorization
 
 <p align="center"><img width="700" src="./assets/Screenshot3_HomePage_Deals.jpg"></p>  
+
 New Feature: Deals of the Day on HomePage
 
 <p align="center"><img width="700" src="./assets/Screenshot4_SearchResults.jpg"></p>  
+
 Search Results after scraping popular E-Commerce Websites
 
 <p align="center"><img width="700" src="./assets/Screenshot5_Wishlists.jpg"></p>  
+
 New Feature: Wishlists
 
-<p align="center"><img width="700" src="./assets/Screenshot6_Commenting.jpg"></p>  
+<p align="center"><img width="700" src="./assets/Screenshot6_Comments.jpg"></p>  
+
 Feature Upgrade: Commenting
 
 # :muscle: What's Next for future development?
